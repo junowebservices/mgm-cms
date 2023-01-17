@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
-import LatestNews from "../components/LatestNews";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -23,9 +22,8 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <LatestNews />
-      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
-      {/* <section className="section section--gradient">
+      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
@@ -71,7 +69,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
