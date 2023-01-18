@@ -2,10 +2,10 @@ import React from "react";
 
 const LatestNews = () => {
   return (
-    <div className="inside pt-4">
+    <div className="inside pt-4 mb-8">
       <h2 className="text-5xl my-8">Latest News</h2>
       <div className="grid grid-cols-2 place-items-center">
-        <div className="w-full h-[500px] bg-orange-500" />
+        <div className="w-full h-[500px] bg-mainOrange" />
         <div className="w-full h-[500px] grid place-items-center">
           <div className="text-center px-12">
             <h3 className="text-4xl mb-4">Latest</h3>
@@ -28,7 +28,7 @@ const LatestNews = () => {
             </p>
           </div>
         </div>
-        <div className="w-full h-[500px] bg-yellow-400" />
+        <div className="w-full h-[500px] bg-mainYellow" />
       </div>
     </div>
   );

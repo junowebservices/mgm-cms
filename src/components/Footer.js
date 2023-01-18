@@ -53,7 +53,7 @@ const Footer = class extends React.Component {
           </div>
           <p>Search</p>
         </div>
-        <div className="bg-yellow-500">
+        <div className="bg-mainYellow">
           <div className="py-6 flex justify-center gap-6">
             <div className="w-16 h-16 rounded-full bg-white"></div>
             <div className="w-16 h-16 rounded-full bg-white"></div>
