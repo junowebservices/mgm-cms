@@ -8,25 +8,14 @@ module.exports = {
     extend: {
       colors: {
         transparent: "transparent",
-        mainBg: "#f7f8f2",
-        secondaryBg: "#fafcffb3",
-        mainColor: {
-          DEFAULT: "#9EB68E",
-          dark: "#758E4D",
-          light: "#BCC7C2",
-        },
-        SecondaryColor: {
-          DEFAULT: "#FFBD8F",
-          dark: "#D3A47F",
-          light: "#FDF1E7",
-        },
         mainOrange: "#e0630e",
         mainYellow: "#f3b52e",
         mainBlue: "#1589c2",
-        // textColor2: "#69635C",
-        // DarkTextColor: "#e5e5e5",
-        // DarksecondaryTextColor: "#6B6675",
-        // shadowColor: "#E6E9F1",
+        mainText: "#202020",
+      },
+      fontFamily: {
+        playfair: ["Playfair Display", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

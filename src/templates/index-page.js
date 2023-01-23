@@ -12,6 +12,9 @@ import Slider from "../components/Slider";
 import Card from "../components/Card";
 import Button from "../components/ButtonContained";
 import EventsTab from "../components/EventsTab";
+import Sample from "../components/Sample";
+import Embracing from "../components/Embracing";
+import CelebrateWithUs from "../components/CelebrateWithUs";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -29,8 +32,8 @@ export const IndexPageTemplate = ({
     <>
       <Slider />
       <LatestNews />
-      <section>
-        <div className="grid grid-cols-3 inside gap-8">
+      {/* <section>
+        <div className="grid md:grid-cols-3 inside gap-8">
           <Card />
           <Card />
           <Card />
@@ -38,22 +41,11 @@ export const IndexPageTemplate = ({
         <div className="text-center my-8">
           <Button text="read more" />
         </div>
-      </section>
-      <EventsTab />
-      <div className="bg-mainOrange widest text-white">
-        <div className="inside flex">
-          <h2 className="text-5xl py-24">Museums and Galleries Month</h2>
-          <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              amet autem perspiciatis fugiat nam rem, corporis in explicabo
-              molestias culpa vitae eveniet, excepturi nulla eum aliquid quos
-              suscipit dolores odio.
-            </p>
-            <Button text="Know more" />
-          </div>
-        </div>
-      </div>
+      </section> */}
+      {/* <EventsTab /> */}
+      <Sample />
+      <Embracing />
+      <CelebrateWithUs />
 
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       {/* <section className="section section--gradient">
