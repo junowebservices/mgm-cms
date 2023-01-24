@@ -5,7 +5,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const EventsTab = () => {
+export default function EventTabs() {
   let [categories] = useState({
     Recent: [
       {
@@ -58,16 +58,19 @@ const EventsTab = () => {
   });
 
   return (
-    <div className="pt-16 sm:px-0 widest">
+    <div className="w-full max-w-md px-2 py-16 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex justify-center">
+        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  " border-mainOrange border px-3 py-2",
-                  selected ? "bg-mainOrange text-white" : "text-mainOrange "
+                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700",
+                  "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                  selected
+                    ? "bg-white shadow"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
                 )
               }
             >
@@ -75,44 +78,47 @@ const EventsTab = () => {
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="bg-mainOrange py-2">
+        <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
               key={idx}
               className={classNames(
-                "bg-white py-14 mx-2",
+                "rounded-xl bg-white p-3",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <div className="max-w-screen-xl mx-auto">
-                <h2 className="text-5xl pb-6">
-                  Happening Now <span className="text-lg">10.00.2023</span>
-                </h2>
+              <ul>
+                {posts.map((post) => (
+                  <li
+                    key={post.id}
+                    className="relative rounded-md p-3 hover:bg-gray-100"
+                  >
+                    <h3 className="text-sm font-medium leading-5">
+                      {post.title}
+                    </h3>
 
-                <ul className="block">
-                  {posts.map((post) => (
-                    <li key={post.id} className=" py-2 px-3 bg-gray-200">
-                      <h3 className="text-sm font-medium leading-5">
-                        {post.title}
-                      </h3>
+                    <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
+                      <li>{post.date}</li>
+                      <li>&middot;</li>
+                      <li>{post.commentCount} comments</li>
+                      <li>&middot;</li>
+                      <li>{post.shareCount} shares</li>
+                    </ul>
 
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                        <li>{post.date}</li>
-                        <li>&middot;</li>
-                        <li>{post.commentCount} comments</li>
-                        <li>&middot;</li>
-                        <li>{post.shareCount} shares</li>
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    <a
+                      href="#"
+                      className={classNames(
+                        "absolute inset-0 rounded-md",
+                        "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
+                      )}
+                    />
+                  </li>
+                ))}
+              </ul>
             </Tab.Panel>
           ))}
         </Tab.Panels>
       </Tab.Group>
     </div>
   );
-};
-
-export default EventsTab;
+}

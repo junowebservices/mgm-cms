@@ -8,10 +8,10 @@ const Accessibility = () => {
     <div className="w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center px-4 text-sm text-mainText ">
+          <Menu.Button className="inline-flex w-full justify-center px-4 text-xs md:text-sm text-mainText ">
             Accessibility Statement
             <ChevronDownIcon
-              className="ml-2 -mr-1 h-5 w-5 text-mainText"
+              className="ml-2 -mr-1 h-4 w-4 md:h-5 md:w-5 text-mainText"
               aria-hidden="true"
             />
           </Menu.Button>

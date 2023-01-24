@@ -10,7 +10,7 @@
     @apply hover:underline underline-offset-4;
   }
   p {
-    @apply md:text-lg font-roboto text-mainText;
+    @apply text-sm md:text-lg font-roboto text-mainText;
   }
 
   h2,
@@ -21,6 +21,6 @@
     @apply max-w-screen-2xl mx-auto;
   }
   .inside {
-    @apply mx-auto max-w-screen-xl px-9;
+    @apply mx-auto max-w-screen-xl px-0 md:px-9;
   }
 }

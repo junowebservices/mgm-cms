@@ -4,17 +4,8 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
-import LatestNews from "../components/LatestNews";
-import Slider from "../components/Slider";
-import Card from "../components/Card";
-import Button from "../components/ButtonContained";
-import EventsTab from "../components/EventsTab";
-import Sample from "../components/Sample";
-import Embracing from "../components/Embracing";
-import CelebrateWithUs from "../components/CelebrateWithUs";
+
+import HomePage from "../components/Homepage/LandingPage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -30,23 +21,7 @@ export const IndexPageTemplate = ({
 
   return (
     <>
-      <Slider />
-      <LatestNews />
-      {/* <section>
-        <div className="grid md:grid-cols-3 inside gap-8">
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className="text-center my-8">
-          <Button text="read more" />
-        </div>
-      </section> */}
-      {/* <EventsTab /> */}
-      <Sample />
-      <Embracing />
-      <CelebrateWithUs />
-
+      <HomePage />
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       {/* <section className="section section--gradient">
         <div className="container">

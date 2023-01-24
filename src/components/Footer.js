@@ -13,10 +13,9 @@ const Footer = () => {
 
   return (
     <footer className="widest border-t-2 border-mainText">
-      <div className="grid grid-cols-3 inside py-12 gap-y-4">
-        <img className="w-72 h-40" src={logoColored} alt="Logo" />
-        {/* <div className="w-[150px] h-[150px] bg-black">Logo</div> */}
-        <div className="flex flex-col justify-between h-full">
+      <div className="grid md:grid-cols-3 inside px-4 md:px-0 py-6 md:py-12 gap-4 md:gap-y-4">
+        <img className="h-16 md:h-40" src={logoColored} alt="Logo" />
+        <div className="flex flex-col gap-4 md:gap-0 justify-between h-full">
           <div>
             <h3 className="font-semibold text-lg">Telephone</h3>
             <p>8527-2192 loc. 309</p>
@@ -82,9 +81,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <h3 className="text-lg font-semibold">Search</h3>
+        <h3 className="text-lg font-semibold hidden md:block">Search</h3>
       </div>
-      <div className="bg-mainYellow">
+      <div className="bg-mainYellow hidden md:block">
         <div className="py-6 flex justify-center gap-6">
           <div className="w-16 h-16 rounded-full bg-white"></div>
           <div className="w-16 h-16 rounded-full bg-white"></div>
