@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 @layer components {
+  * {
+    @apply font-roboto;
+  }
   p {
     @apply text-sm md:text-lg font-roboto text-mainText;
   }

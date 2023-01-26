@@ -1,17 +1,46 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+title: Latest News
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
-mainpitch:
-  title: Why Kaldi
+firstquadrant:
+  title: First Quadrant
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
+  button: true
+  textbutton: Read more
+secondquadrant:
+  title: Second Quadrant
+  description: >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+  button: false
+  textbutton: ""
+thirdquadrant:
+  title: Third Quadrant
+  description: >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+  button: false
+  textbutton: ""
+fourtquadrant:
+  title: Second Quadrant
+  description: >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+  button: false
+  textbutton: ""
+card:
+  heading: Sample Card Featured
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
+  image1:
+    alt: A close-up of a paper filter filled with ground coffee
+    image: /img/products-grid3.jpg
+fullrow:
+  heading: Museums and Galleries Month (MGM)
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
+  button: true
+  textbutton: know more
+description: >
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to

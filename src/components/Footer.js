@@ -23,13 +23,21 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold text-lg">Email</h3>
-            <a href="#">mgmsecretariat@gmail.com</a>
+            <a href="mailto:mgmsecretariat@gmail.com" className="text-mainText">
+              mgmsecretariat@gmail.com
+            </a>
           </div>
         </div>
         <div className="flex flex-col justify-between h-full">
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
-            <p>633 General Luna Street, Intramuros, Mani;a</p>
+            <a
+              href="https://goo.gl/maps/hLjq3q9nR4oDo22b8"
+              target="_blank"
+              className="text-mainText"
+            >
+              633 General Luna Street, Intramuros, Manila
+            </a>
           </div>
           <div>facebook</div>
         </div>

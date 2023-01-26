@@ -11,17 +11,77 @@ import Sample from "../Sample";
 import Embracing from "../Embracing";
 import CelebrateWithUs from "../CelebrateWithUs";
 import ButtonBorder from "../ButtonBorder";
+import { getImage } from "gatsby-plugin-image";
 
-const LandingPage = () => {
+const LandingPage = ({
+  title,
+  firstquadrant,
+  secondquadrant,
+  thirdquadrant,
+  fourtquadrant,
+  fullrow,
+  card,
+}) => {
+  const cardImage = getImage(card.image1) || card.image1;
   return (
     <div>
       <Slider />
-      <LatestNews />
+      <section className="inside mb-8 px-4 md:px-0">
+        {title && <h2 className="text-5xl my-8">{title}</h2>}
+        <div className="grid md:grid-cols-2 place-items-center ">
+          {/* <div className="bg-mainOrange w-full py-12 md:py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" /> */}
+          <div className="bg-mainOrange w-full py-12 md:py-12 md:h-[400px] grid place-items-center border-2 border-b-0 border-mainText">
+            <div className="text-center px-4 md:px-12">
+              <h3 className="text-4xl mb-4">
+                {firstquadrant && firstquadrant.title}
+              </h3>
+              <p>{firstquadrant && firstquadrant.description}</p>
+            </div>
+          </div>
+          {secondquadrant && (
+            <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+              <div className="text-center px-4 md:px-12">
+                <h3 className="text-4xl mb-4">{secondquadrant.title}</h3>
+                <p>{secondquadrant.description}</p>
+              </div>
+            </div>
+          )}
+          {thirdquadrant && (
+            <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
+              <div className="text-center  px-4 md:px-12">
+                <h3 className="text-4xl mb-4">{thirdquadrant.title}</h3>
+                <p>{thirdquadrant.description}</p>
+              </div>
+            </div>
+          )}
+          <div className="w-full py-12 md:py-12 md:h-[400px] bg-mainYellow grid place-items-center border-2 border-l-0 border-mainText">
+            <div className="text-center  px-4 md:px-12">
+              <h3 className="text-4xl mb-4">
+                {fourtquadrant && fourtquadrant.title}
+              </h3>
+              <p>{fourtquadrant && fourtquadrant.description}</p>
+            </div>
+          </div>
+          {/* <div className="bg-mainYellow w-full py-12 md:py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" /> */}
+        </div>
+      </section>
       <section className="text-center py-0 md:py-6">
         <div className="grid md:grid-cols-3 inside gap-5 pt-0 pb-6 md:py-6 px-4 md:px-0">
-          <Card />
-          <Card />
-          <Card />
+          <Card
+            image={cardImage}
+            heading={card.heading}
+            desc={card.description}
+          />
+          <Card
+            image={cardImage}
+            heading={card.heading}
+            desc={card.description}
+          />
+          <Card
+            image={cardImage}
+            heading={card.heading}
+            desc={card.description}
+          />
         </div>
         <div>
           <ButtonContained text="read more" color="mainOrange" />
@@ -30,22 +90,15 @@ const LandingPage = () => {
       <EventTabs />
       <section className="bg-mainOrange widest text-white h-[650px] md:h-[500px] flex px-4 md:px-0">
         <div className="inside grid md:grid-cols-5 py-24">
-          <h2 className="text-5xl text-white col-span-2">
-            Museums <br className="hidden md:block" />
-            and Galleries <br className="hidden md:block" />
-            Month
-            <br className="hidden md:block" />
-            (MGM)
+          <h2 className="text-5xl text-white col-span-2 md:w-[200px]">
+            {fullrow.heading}
           </h2>
 
           <div className="col-span-3">
-            <p className="text-white mb-12">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              amet autem perspiciatis fugiat nam rem, corporis in explicabo
-              molestias culpa vitae eveniet, excepturi nulla eum aliquid quos
-              suscipit dolores odio.
-            </p>
-            <ButtonBorder text="Know more" color="white" />
+            <p className="text-white mb-12">{fullrow.description}</p>
+            {fullrow.button && (
+              <ButtonBorder text={fullrow.textbutton} color="white" />
+            )}
           </div>
         </div>
       </section>
@@ -55,7 +108,7 @@ const LandingPage = () => {
           <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
             <div className="text-center px-4 md:px-12">
               <h3 className="text-4xl mb-4">Embracing Uncertainly</h3>
-              <p className="mb-2 md:mb-6">
+              <p className="mb-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi eaque reiciendis,
               </p>
@@ -65,7 +118,7 @@ const LandingPage = () => {
           <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
             <div className="text-center  px-4 md:px-12">
               <h3 className="text-4xl mb-4">Events & Activities</h3>
-              <p className="mb-2 md:mb-6">
+              <p className="mb-6">
                 adipisicing elit. Eum, quidem voluptate! Repudiandae a autem
                 asperiores esse incidunt
               </p>

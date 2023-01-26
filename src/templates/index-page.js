@@ -12,17 +12,27 @@ export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
-  mainpitch,
+  firstquadrant,
+  secondquadrant,
+  thirdquadrant,
+  fourtquadrant,
+  fullrow,
+  card,
   description,
   intro,
 }) => {
   const heroImage = getImage(image) || image;
-
   return (
     <>
-      <HomePage />
-      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
+      <HomePage
+        title={title}
+        // firstquadrant={firstquadrant}
+        secondquadrant={secondquadrant}
+        thirdquadrant={thirdquadrant}
+        fullrow={fullrow}
+        card={card}
+        // fourtquadrant={fourtquadrant}
+      />
       {/* <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -78,8 +88,11 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  firstquadrant: PropTypes.object,
+  secondquadrant: PropTypes.object,
+  thirdquadrant: PropTypes.object,
+  fourtquadrant: PropTypes.object,
+  card: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -88,17 +101,22 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
+  console.log(frontmatter.card, "wwwfrontmatter");
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        // image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        firstquadrant={frontmatter.firstquadrant}
+        secondquadrant={frontmatter.secondquadrant}
+        thirdquadrant={frontmatter.thirdquadrant}
+        fourtquadrant={frontmatter.fourtquadrant}
+        fullrow={frontmatter.fullrow}
+        card={frontmatter.card}
+        // heading={frontmatter.heading}
+        // mainpitch={frontmatter.mainpitch}
+        // description={frontmatter.description}
+        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -125,10 +143,47 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
-        mainpitch {
+        firstquadrant {
           title
           description
+          button
+          textbutton
+        }
+        secondquadrant {
+          title
+          description
+          button
+          textbutton
+        }
+        thirdquadrant {
+          title
+          description
+          button
+          textbutton
+        }
+        fourtquadrant {
+          title
+          description
+          button
+          textbutton
+        }
+        card {
+          heading
+          description
+          image1 {
+            alt
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+        fullrow {
+          heading
+          description
+          button
+          textbutton
         }
         description
         intro {
