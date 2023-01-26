@@ -2,7 +2,7 @@ import React from "react";
 
 const LatestNews = ({}) => {
   return (
-    <section className="inside mb-8">
+    <section className="inside mb-8 px-4 md:px-0">
       <h2 className="text-5xl my-8">Latest News</h2>
       <div className="grid md:grid-cols-2 place-items-center ">
         <div className="bg-mainOrange w-full py-12 md:py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" />

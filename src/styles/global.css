@@ -6,9 +6,6 @@
 @tailwind utilities;
 
 @layer components {
-  a {
-    @apply hover:underline underline-offset-4;
-  }
   p {
     @apply text-sm md:text-lg font-roboto text-mainText;
   }

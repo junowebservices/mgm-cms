@@ -5,6 +5,7 @@ import logo from "../img/logo.svg";
 
 import logoColored from "../img/logo-colored.svg";
 import Accessibility from "./Accessibility";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
@@ -25,16 +26,16 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between inside px-4 md:px-0 py-5 md:py-3">
+      <div className="hidden md:flex justify-between inside px-4 md:px-0 py-5 md:py-3">
         <Link to="/">
           <img className="h-16 md:h-28" src={logoColored} alt="Logo" />
         </Link>
-        <div className="hidden md:flex flex-col justify-end">
+        <div className="flex flex-col justify-end">
           <div className="flex space-x-2 justify-end">
             <p>F</p>
             <p>Twitter</p>
           </div>
-          <div className="hidden md:flex mt-2 space-x-12">
+          <div className="flex mt-2 space-x-12">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/program">Program</Link>
@@ -43,6 +44,13 @@ const Navbar = () => {
             <Link to="/contact">Contact</Link>
           </div>
         </div>
+      </div>
+      {/* Mobile */}
+      <div className="p-4 flex items-center md:hidden">
+        <Link to="/">
+          <img className="h-16 md:h-28" src={logoColored} alt="Logo" />
+        </Link>
+        <MobileNav />
       </div>
     </div>
   );
