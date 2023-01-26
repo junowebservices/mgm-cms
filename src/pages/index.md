@@ -14,32 +14,41 @@ firstquadrant:
 secondquadrant:
   title: Second Quadrant
   description: >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
+    obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
+    explicabo alias autem? Modi voluptas plac
   button: false
   textbutton: ""
 thirdquadrant:
   title: Third Quadrant
   description: >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
+    obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
+    explicabo alias autem? Modi voluptas plac
   button: false
   textbutton: ""
 fourtquadrant:
   title: Second Quadrant
   description: >
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas explicabo alias autem? Modi voluptas plac
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
+    obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
+    explicabo alias autem? Modi voluptas plac
   button: false
   textbutton: ""
 card:
-  heading: Sample Card Featured
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
+  heading: Sample Card
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+    autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
+    vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
-fullrow:
-  heading: Museums and Galleries Month (MGM)
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
-  button: true
-  textbutton: know more
+  image3:
+    alt: sample
+    image: /img/coffee.png
+  image2:
+    image: /img/chemex.jpg
+    alt: sample3
 description: >
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -80,6 +89,13 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+fullrow:
+  heading: Museums and Galleries Month AWESOME!
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+    autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
+    vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
+  button: true
+  textbutton: know more
 main:
   heading: Great coffee with no compromises
   description: >
