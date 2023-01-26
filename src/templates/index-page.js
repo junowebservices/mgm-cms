@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
     <>
       <HomePage
         title={title}
-        // firstquadrant={firstquadrant}
+        firstquadrant={firstquadrant}
         secondquadrant={secondquadrant}
         thirdquadrant={thirdquadrant}
         fullrow={fullrow}

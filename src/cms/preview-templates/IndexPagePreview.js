@@ -18,6 +18,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         fullrow={data.fullrow}
         description={data.description}
         intro={data.intro || { blurbs: [] }}
+        card={data.card}
       />
     );
   } else {
