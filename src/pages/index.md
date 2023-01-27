@@ -15,7 +15,7 @@ imageslider:
     alt: Coffee 22
     image: /img/products-grid1.jpg
   image5:
-    alt: hgfd
+    alt: sample
     image: /img/flavor_wheel.jpg
 grid:
   title: ""
