@@ -39,15 +39,15 @@ grid:
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
       obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
       explicabo alias autem? Modi voluptas plac
-    button: false
-    textbutton: " "
+    button: true
+    textbutton: " Sample Button"
   fourtquadrant:
     title: " "
     description: " "
     button: false
     textbutton: " "
 fullrow:
-  title: Museums and Galleries Month AWESOME!
+  title: Museums and Galleries Month (MGM)
   description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
@@ -56,10 +56,10 @@ fullrow:
 grid2:
   title: " "
   firstquadrant:
-    title: " "
-    description: " "
-    button: false
-    textbutton: " "
+    title: First Quadrant
+    description: "Sample of the first Quadrant "
+    button: true
+    textbutton: " Sample"
   secondquadrant:
     title: Embracing Uncertainly
     description: >
@@ -80,7 +80,7 @@ grid2:
     button: false
     textbutton: " "
 fullrow2:
-  title: Celebrate with us
+  title: Celebrate with Us. Awesome!
   description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
