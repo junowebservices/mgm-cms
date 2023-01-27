@@ -14,8 +14,11 @@ imageslider:
   image4:
     alt: Coffee 22
     image: /img/products-grid1.jpg
+  image5:
+    alt: hgfd
+    image: /img/flavor_wheel.jpg
 grid:
-  title: Sample Grid
+  title: ""
   firstquadrant:
     title: ""
     description: ""
@@ -47,8 +50,7 @@ grid:
     textbutton: ""
 fullrow:
   title: Museums and Galleries Month AWESOME!
-  description:
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
   button: true
@@ -57,31 +59,35 @@ grid2:
   title: ""
   firstquadrant:
     title: ""
-    description: >
+    description: |
       ""
     button: false
     textbutton: ""
   secondquadrant:
     title: Embracing Uncertainly
     description: >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat obcaecati sunt amet atque nobis modi eaque reiciendis,
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
+      obcaecati sunt amet atque nobis modi eaque reiciendis,
     button: true
-    textbutton: "explore"
+    textbutton: explore
   thirdquadrant:
     title: Events & Activities
     description: >
-      adipisicing elit. Eum, quidem voluptate! Repudiandae a autem asperiores esse incidunt
+      adipisicing elit. Eum, quidem voluptate! Repudiandae a autem asperiores
+      esse incidunt
     button: true
-    textbutton: "see more"
+    textbutton: see more
   fourtquadrant:
     title: ""
-    description: >
+    description: |
       ""
     button: false
     textbutton: ""
 fullrow2:
   title: Celebrate with us
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+    autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
+    vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
   button: true
   textbutton: join us
 ---
