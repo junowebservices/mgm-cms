@@ -9,30 +9,18 @@ import HomePage from "../components/Homepage/LandingPage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
   title,
-  heading,
-  firstquadrant,
-  secondquadrant,
-  thirdquadrant,
-  fourtquadrant,
+  imageslider,
+  grid,
   fullrow,
-  card,
-  description,
-  intro,
+  grid2,
+  fullrow2,
 }) => {
-  const heroImage = getImage(image) || image;
+  // const heroImage = getImage(image) || image;
   return (
     <>
-      <HomePage
-        title={title}
-        firstquadrant={firstquadrant}
-        secondquadrant={secondquadrant}
-        thirdquadrant={thirdquadrant}
-        fullrow={fullrow}
-        card={card}
-        // fourtquadrant={fourtquadrant}
-      />
+      <h1>sample</h1>
+      <HomePage title={title} grid={grid} fullrow={fullrow} grid2={grid2} />
       {/* <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -85,39 +73,37 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  firstquadrant: PropTypes.object,
-  secondquadrant: PropTypes.object,
-  thirdquadrant: PropTypes.object,
-  fourtquadrant: PropTypes.object,
-  card: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  imageslider: PropTypes.object,
+  grid: PropTypes.object,
+  fullrow: PropTypes.object,
+  grid2: PropTypes.object,
+  fullrow2: PropTypes.object,
+  // image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  // }),
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter.card, "wwwfrontmatter");
+  console.log(data, "wwwdata");
+  // const { frontmatter } = data.markdownRemark;
+  // console.log(frontmatter.imageslider, "wwwfrontmatter");
   return (
     <Layout>
-      <IndexPageTemplate
-        // image={frontmatter.image}
+      {/* <IndexPageTemplate
         title={frontmatter.title}
-        firstquadrant={frontmatter.firstquadrant}
-        secondquadrant={frontmatter.secondquadrant}
-        thirdquadrant={frontmatter.thirdquadrant}
-        fourtquadrant={frontmatter.fourtquadrant}
+        imageslider={frontmatter.imageslider}
+        grid={frontmatter.grid}
         fullrow={frontmatter.fullrow}
-        card={frontmatter.card}
+        grid2={frontmatter.grid2}
+        // image={frontmatter.image}
         // heading={frontmatter.heading}
         // mainpitch={frontmatter.mainpitch}
         // description={frontmatter.description}
         // intro={frontmatter.intro}
-      />
+      /> */}
     </Layout>
   );
 };
@@ -137,68 +123,116 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading
-        firstquadrant {
-          title
-          description
-          button
-          textbutton
-        }
-        secondquadrant {
-          title
-          description
-          button
-          textbutton
-        }
-        thirdquadrant {
-          title
-          description
-          button
-          textbutton
-        }
-        fourtquadrant {
-          title
-          description
-          button
-          textbutton
-        }
-        card {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childrenImageSharp {
-                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-              }
-            }
-          }
-        }
-        fullrow {
-          heading
-          description
-          button
-          textbutton
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
 `;
+// export const pageQuery = graphql`
+//   query IndexPageTemplate {
+//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+//       frontmatter {
+//         title
+//         imageslider {
+//           image1 {
+//             alt
+//             image {
+//               childrenImageSharp {
+//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+//               }
+//             }
+//           }
+//           image2 {
+//             alt
+//             image {
+//               childrenImageSharp {
+//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+//               }
+//             }
+//           }
+//           image3 {
+//             alt
+//             image {
+//               childrenImageSharp {
+//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+//               }
+//             }
+//           }
+//           image4 {
+//             alt
+//             image {
+//               childrenImageSharp {
+//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+//               }
+//             }
+//           }
+//         }
+//         grid {
+//           title
+//           firstquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           secondquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           thirdquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           fourtquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//         }
+//         fullrow {
+//           title
+//           description
+//           button
+//           textbutton
+//         }
+//         grid2 {
+//           title
+//           firstquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           secondquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           thirdquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//           fourtquadrant {
+//             title
+//             description
+//             button
+//             textbutton
+//           }
+//         }
+//         fullrow2 {
+//           title
+//           description
+//           button
+//           textbutton
+//         }
+//       }
+//     }
+//   }
+// `;

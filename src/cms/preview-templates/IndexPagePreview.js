@@ -8,17 +8,23 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        image={getAsset(data.image)}
         title={data.title}
-        heading={data.heading}
-        firstquadrant={data.firstquadrant}
-        secondquadrant={data.secondquadrant}
-        thirdquadrant={data.thirdquadrant}
-        fourtquadrant={data.fourtquadrant}
+        // imageslider={data.imageslider}
+        grid={data.grid}
         fullrow={data.fullrow}
-        description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        card={data.card}
+        grid2={data.grid2}
+        fullrow2={data.fullrow2}
+
+        // image={getAsset(data.image)}
+        // heading={data.heading}
+        // firstquadrant={data.firstquadrant}
+        // secondquadrant={data.secondquadrant}
+        // thirdquadrant={data.thirdquadrant}
+        // fourtquadrant={data.fourtquadrant}
+        // fullrow={data.fullrow}
+        // description={data.description}
+        // intro={data.intro || { blurbs: [] }}
+        // card={data.card}
       />
     );
   } else {
