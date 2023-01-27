@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
-title: null
-image: /img/products-grid2.jpg
+title: Sample
+image: /img/products-full-width.jpg
 imageslider:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
@@ -32,7 +32,7 @@ grid:
       obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
       explicabo alias autem? Modi voluptas plac
     button: false
-    textbutton: ""
+    textbutton: " "
   thirdquadrant:
     title: Third Quadrant
     description: >
@@ -40,7 +40,7 @@ grid:
       obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
       explicabo alias autem? Modi voluptas plac
     button: false
-    textbutton: ""
+    textbutton: " "
   fourtquadrant:
     title: " "
     description: " "
@@ -48,8 +48,7 @@ grid:
     textbutton: " "
 fullrow:
   title: Museums and Galleries Month AWESOME!
-  description:
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
   button: true
@@ -82,8 +81,7 @@ grid2:
     textbutton: " "
 fullrow2:
   title: Celebrate with us
-  description:
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
   button: true
