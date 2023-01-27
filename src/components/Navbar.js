@@ -10,7 +10,7 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   return (
     <div className="widest">
-      <div className="bg-gray-100 py-2 px-2 md:px-0">
+      <div className="bg-gray-100 py-2 px-4 md:px-0">
         <div className="flex justify-between items-center inside ">
           <p className="text-xs md:text-sm">GOVPH</p>
           <div className="flex md:gap-8 md:mr-6 ">
@@ -26,11 +26,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex justify-between inside px-4 md:px-0 py-5 md:py-3">
+      <div className="hidden md:flex justify-between inside py-5 md:py-3">
         <Link to="/">
-          <img className="h-16 md:h-28" src={logoColored} alt="Logo" />
+          <img className="h-16 md:h-28 px-4" src={logoColored} alt="Logo" />
         </Link>
-        <div className="flex flex-col justify-end">
+        <div className="flex flex-col justify-end px-4">
           <div className="flex space-x-2 justify-end">
             <p>F</p>
             <p>Twitter</p>
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile */}
-      <div className="p-4 flex items-center md:hidden">
+      <div className="p-4 flex items-center md:hidden justify-between">
         <Link to="/">
           <img className="h-16 md:h-28" src={logoColored} alt="Logo" />
         </Link>

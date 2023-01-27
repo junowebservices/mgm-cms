@@ -69,8 +69,18 @@ collections:
                     required: false,
                     fields:
                       [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: image,
+                          required: false,
+                        },
+                        {
+                          label: Alt,
+                          name: alt,
+                          widget: string,
+                          required: false,
+                        },
                       ],
                   },
                   {
@@ -80,8 +90,18 @@ collections:
                     required: false,
                     fields:
                       [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: image,
+                          required: false,
+                        },
+                        {
+                          label: Alt,
+                          name: alt,
+                          widget: string,
+                          required: false,
+                        },
                       ],
                   },
                   {
@@ -91,8 +111,18 @@ collections:
                     required: false,
                     fields:
                       [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: image,
+                          required: false,
+                        },
+                        {
+                          label: Alt,
+                          name: alt,
+                          widget: string,
+                          required: false,
+                        },
                       ],
                   },
                   {
@@ -102,8 +132,18 @@ collections:
                     required: false,
                     fields:
                       [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: image,
+                          required: false,
+                        },
+                        {
+                          label: Alt,
+                          name: alt,
+                          widget: string,
+                          required: false,
+                        },
                       ],
                   },
                 ],
@@ -114,75 +154,22 @@ collections:
               widget: object,
               fields:
                 [
-                  {
-                    label: Title,
-                    name: title,
-                    widget: string,
-                    required: false,
-                  },
-                  {
-                    label: firstQuadrant,
-                    name: firstquadrant,
-                    widget: object,
-                    required: false,
-                    fields:
-                      [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
-                        {
-                          label: "Button",
-                          name: "button",
-                          widget: "boolean",
-                          required: false,
-                        },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
-                      ],
-                  },
+                  { label: Title, name: title, widget: string },
                   {
                     label: secondQuadrant,
                     name: secondquadrant,
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                   {
@@ -191,62 +178,15 @@ collections:
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
-                      ],
-                  },
-                  {
-                    label: fourtQuadrant,
-                    name: fourtquadrant,
-                    widget: object,
-                    fields:
-                      [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
-                        {
-                          label: "Button",
-                          name: "button",
-                          widget: "boolean",
-                          required: false,
-                        },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                 ],
@@ -291,30 +231,15 @@ collections:
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                   {
@@ -323,30 +248,15 @@ collections:
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                   {
@@ -355,30 +265,15 @@ collections:
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                   {
@@ -387,30 +282,15 @@ collections:
                     widget: object,
                     fields:
                       [
-                        {
-                          label: Title,
-                          name: title,
-                          widget: string,
-                          required: false,
-                        },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
                         {
                           label: "Button",
                           name: "button",
                           widget: "boolean",
                           required: false,
                         },
-                        {
-                          label: TextButton,
-                          name: textbutton,
-                          widget: text,
-                          required: false,
-                        },
+                        { label: TextButton, name: textbutton, widget: text },
                       ],
                   },
                 ],
@@ -429,12 +309,7 @@ collections:
                     widget: "boolean",
                     required: false,
                   },
-                  {
-                    label: TextButton,
-                    name: textbutton,
-                    widget: text,
-                    required: false,
-                  },
+                  { label: TextButton, name: textbutton, widget: text },
                 ],
             }
       - file: "src/pages/about/index.md"

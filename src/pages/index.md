@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 title: null
+image: /img/products-grid2.jpg
 imageslider:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
@@ -18,12 +19,12 @@ imageslider:
     alt: sample
     image: /img/flavor_wheel.jpg
 grid:
-  title: ""
+  title: " "
   firstquadrant:
-    title: ""
-    description: ""
+    title: " "
+    description: " "
     button: true
-    textbutton: Read more
+    textbutton: ""
   secondquadrant:
     title: Second Quadrant
     description: >
@@ -41,28 +42,25 @@ grid:
     button: false
     textbutton: ""
   fourtquadrant:
-    title: Second Quadrant
-    description: >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id quaerat
-      obcaecati sunt amet atque nobis modi eaque reiciendis, officiis voluptas
-      explicabo alias autem? Modi voluptas plac
+    title: " "
+    description: " "
     button: false
-    textbutton: ""
+    textbutton: " "
 fullrow:
   title: Museums and Galleries Month AWESOME!
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description:
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
   button: true
   textbutton: know more
 grid2:
-  title: ""
+  title: " "
   firstquadrant:
-    title: ""
-    description: |
-      ""
+    title: " "
+    description: " "
     button: false
-    textbutton: ""
+    textbutton: " "
   secondquadrant:
     title: Embracing Uncertainly
     description: >
@@ -78,14 +76,14 @@ grid2:
     button: true
     textbutton: see more
   fourtquadrant:
-    title: ""
-    description: |
-      ""
+    title: " "
+    description: " "
     button: false
-    textbutton: ""
+    textbutton: " "
 fullrow2:
   title: Celebrate with us
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description:
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
   button: true

@@ -10,6 +10,7 @@ import HomePage from "../components/Homepage/LandingPage";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   title,
+  image,
   imageslider,
   grid,
   fullrow,
@@ -19,8 +20,14 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
   return (
     <>
-      <h1>sample</h1>
-      <HomePage title={title} grid={grid} fullrow={fullrow} grid2={grid2} />
+      <HomePage
+        title={title}
+        image={image}
+        grid={grid}
+        fullrow={fullrow}
+        grid2={grid2}
+        fullrow2={fullrow2}
+      />
       {/* <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -74,6 +81,7 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   imageslider: PropTypes.object,
   grid: PropTypes.object,
   fullrow: PropTypes.object,
@@ -88,22 +96,24 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   console.log(data, "wwwdata");
-  // const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.markdownRemark;
   // console.log(frontmatter.imageslider, "wwwfrontmatter");
   return (
     <Layout>
-      {/* <IndexPageTemplate
+      <IndexPageTemplate
         title={frontmatter.title}
+        image={frontmatter.image}
         imageslider={frontmatter.imageslider}
         grid={frontmatter.grid}
         fullrow={frontmatter.fullrow}
         grid2={frontmatter.grid2}
+        fullrow2={frontmatter.fullrow2}
         // image={frontmatter.image}
         // heading={frontmatter.heading}
         // mainpitch={frontmatter.mainpitch}
         // description={frontmatter.description}
         // intro={frontmatter.intro}
-      /> */}
+      />
     </Layout>
   );
 };
@@ -123,116 +133,114 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        imageslider {
+          image1 {
+            alt
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+          image3 {
+            alt
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+          image4 {
+            alt
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+        grid {
+          title
+          firstquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          secondquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          thirdquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          fourtquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+        }
+        fullrow {
+          title
+          description
+          button
+          textbutton
+        }
+        grid2 {
+          title
+          firstquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          secondquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          thirdquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+          fourtquadrant {
+            title
+            description
+            button
+            textbutton
+          }
+        }
+        fullrow2 {
+          title
+          description
+          button
+          textbutton
+        }
       }
     }
   }
 `;
-// export const pageQuery = graphql`
-//   query IndexPageTemplate {
-//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-//       frontmatter {
-//         title
-//         imageslider {
-//           image1 {
-//             alt
-//             image {
-//               childrenImageSharp {
-//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-//               }
-//             }
-//           }
-//           image2 {
-//             alt
-//             image {
-//               childrenImageSharp {
-//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-//               }
-//             }
-//           }
-//           image3 {
-//             alt
-//             image {
-//               childrenImageSharp {
-//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-//               }
-//             }
-//           }
-//           image4 {
-//             alt
-//             image {
-//               childrenImageSharp {
-//                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-//               }
-//             }
-//           }
-//         }
-//         grid {
-//           title
-//           firstquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           secondquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           thirdquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           fourtquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//         }
-//         fullrow {
-//           title
-//           description
-//           button
-//           textbutton
-//         }
-//         grid2 {
-//           title
-//           firstquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           secondquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           thirdquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//           fourtquadrant {
-//             title
-//             description
-//             button
-//             textbutton
-//           }
-//         }
-//         fullrow2 {
-//           title
-//           description
-//           button
-//           textbutton
-//         }
-//       }
-//     }
-//   }
-// `;

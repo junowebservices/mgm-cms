@@ -12,9 +12,11 @@ import Embracing from "../Embracing";
 import CelebrateWithUs from "../CelebrateWithUs";
 import ButtonBorder from "../ButtonBorder";
 import { getImage } from "gatsby-plugin-image";
+import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const LandingPage = ({
   title,
+  image,
   grid,
   grid2,
   // firstquadrant,
@@ -22,48 +24,90 @@ const LandingPage = ({
   // thirdquadrant,
   // fourtquadrant,
   fullrow,
+  fullrow2,
   // card,
 }) => {
   // const cardImage = getImage(card.image1) || card.image1;
+  console.log(image, "image");
+
   return (
     <div>
-      <Slider />
+      {/* <Slider /> */}
+      <div className="h-[600px] overflow-hidden w-full grid">
+        <PreviewCompatibleImage imageInfo={image} />
+      </div>
       {grid && (
-        <section className="inside mb-8 px-4 md:px-0">
-          {title && <h2 className="text-5xl my-8">{grid.title}</h2>}
+        <section className="inside my-8 px-4 md:px-0">
           <div className="grid md:grid-cols-2 place-items-center ">
-            <div className="bg-mainOrange w-full py-12 md:py-12 md:h-[400px] grid place-items-center border-2 border-b-0 border-mainText">
-              <div className="text-center px-4 md:px-12">
-                <h3 className="text-4xl mb-4">
-                  {grid.firstquadrant && grid.firstquadrant.title}
-                </h3>
-                <p>{grid.firstquadrant && grid.firstquadrant.description}</p>
+            {grid.firstquadrant.title.length > 1 ? (
+              <div className="w-full py-12 md:h-[400px] bg-mainOrange grid place-items-center border-2 border-b-0 border-mainText">
+                {grid.firstquadrant && (
+                  <div className="text-center px-4 md:px-12">
+                    <h3 className="text-4xl mb-4">
+                      {grid.firstquadrant.title}
+                    </h3>
+                    <p className="mb-6">{grid.firstquadrant.description}</p>
+                    {grid.firstquadrant.button && (
+                      <ButtonBorder
+                        text={grid.firstquadrant.textbutton}
+                        color="mainText"
+                      />
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
-            {grid.secondquadrant && (
-              <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+            ) : (
+              <div className="bg-mainOrange w-full py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" />
+            )}
+
+            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+              {grid.secondquadrant && (
                 <div className="text-center px-4 md:px-12">
                   <h3 className="text-4xl mb-4">{grid.secondquadrant.title}</h3>
-                  <p>{grid.secondquadrant.description}</p>
+                  <p className="mb-6">{grid.secondquadrant.description}</p>
+                  {grid.secondquadrant.button && (
+                    <ButtonBorder
+                      text={grid.secondquadrant.textbutton}
+                      color="mainText"
+                    />
+                  )}
                 </div>
-              </div>
-            )}
-            {grid.thirdquadrant && (
-              <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
-                <div className="text-center  px-4 md:px-12">
-                  <h3 className="text-4xl mb-4">{grid.thirdquadrant.title}</h3>
-                  <p>{grid.thirdquadrant.description}</p>
-                </div>
-              </div>
-            )}
-            <div className="w-full py-12 md:py-12 md:h-[400px] bg-mainYellow grid place-items-center border-2 border-l-0 border-mainText">
-              <div className="text-center  px-4 md:px-12">
-                <h3 className="text-4xl mb-4">
-                  {grid.fourtquadrant && grid.fourtquadrant.title}
-                </h3>
-                <p>{grid.fourtquadrant && grid.fourtquadrant.description}</p>
-              </div>
+              )}
             </div>
+            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
+              {grid.thirdquadrant && (
+                <div className="text-center px-4 md:px-12">
+                  <h3 className="text-4xl mb-4">{grid.thirdquadrant.title}</h3>
+                  <p className="mb-6">{grid.thirdquadrant.description}</p>
+                  {grid.thirdquadrant.button && (
+                    <ButtonBorder
+                      text={grid.thirdquadrant.textbutton}
+                      color="mainText"
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+            {grid.fourtquadrant.title.length > 1 ? (
+              <div className="w-full py-12 md:h-[400px] bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
+                {grid.fourtquadrant && (
+                  <div className="text-center px-4 md:px-12">
+                    <h3 className="text-4xl mb-4">
+                      {grid.fourtquadrant.title}
+                    </h3>
+                    <p className="mb-6">{grid.fourtquadrant.description}</p>
+                    {grid.fourtquadrant.button && (
+                      <ButtonBorder
+                        text={grid.fourtquadrant.textbutton}
+                        color="mainText"
+                      />
+                    )}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="bg-mainBlue w-full py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />
+            )}
           </div>
         </section>
       )}
@@ -110,55 +154,105 @@ const LandingPage = ({
       {grid2 && (
         <section className="inside -mt-24 mb-8 px-4 md:px-0">
           <div className="grid md:grid-cols-2 place-items-center ">
-            <div className="bg-mainYellow w-full py-12 md:py-12 md:h-[400px] hidden md:block" />
-            <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
-              <div className="text-center px-4 md:px-12">
-                <h3 className="text-4xl mb-4">Embracing Uncertainly</h3>
-                <p className="mb-6">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                  id quaerat obcaecati sunt amet atque nobis modi eaque
-                  reiciendis,
-                </p>
-                <ButtonBorder text="explore" color="mainOrange" />
+            {grid2.firstquadrant.title.length > 1 ? (
+              <div className="w-full py-12 md:h-[400px] bg-mainYellow grid place-items-center border-2 border-b-0 border-mainText">
+                {grid2.firstquadrant && (
+                  <div className="text-center px-4 md:px-12">
+                    <h3 className="text-4xl mb-4">
+                      {grid2.firstquadrant.title}
+                    </h3>
+                    <p className="mb-6">{grid2.firstquadrant.description}</p>
+                    {grid2.firstquadrant.button && (
+                      <ButtonBorder
+                        text={grid2.firstquadrant.textbutton}
+                        color="mainText"
+                      />
+                    )}
+                  </div>
+                )}
               </div>
+            ) : (
+              <div className="bg-mainYellow w-full py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" />
+            )}
+
+            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+              {grid2.secondquadrant && (
+                <div className="text-center px-4 md:px-12">
+                  <h3 className="text-4xl mb-4">
+                    {grid2.secondquadrant.title}
+                  </h3>
+                  <p className="mb-6">{grid2.secondquadrant.description}</p>
+                  {grid2.secondquadrant.button && (
+                    <ButtonBorder
+                      text={grid2.secondquadrant.textbutton}
+                      color="mainText"
+                    />
+                  )}
+                </div>
+              )}
             </div>
-            <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
-              <div className="text-center  px-4 md:px-12">
-                <h3 className="text-4xl mb-4">Events & Activities</h3>
-                <p className="mb-6">
-                  adipisicing elit. Eum, quidem voluptate! Repudiandae a autem
-                  asperiores esse incidunt
-                </p>
-                <ButtonBorder text="see more" color="mainOrange" />
+            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
+              {grid2.thirdquadrant && (
+                <div className="text-center px-4 md:px-12">
+                  <h3 className="text-4xl mb-4">{grid2.thirdquadrant.title}</h3>
+                  <p className="mb-6">{grid2.thirdquadrant.description}</p>
+                  {grid2.thirdquadrant.button && (
+                    <ButtonBorder
+                      text={grid2.thirdquadrant.textbutton}
+                      color="mainText"
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+            {grid2.fourtquadrant.title.length > 1 ? (
+              <div className="w-full py-12 md:h-[400px] bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
+                {grid2.fourtquadrant && (
+                  <div className="text-center px-4 md:px-12">
+                    <h3 className="text-4xl mb-4">
+                      {grid2.fourtquadrant.title}
+                    </h3>
+                    <p className="mb-6">{grid2.fourtquadrant.description}</p>
+                    {grid2.fourtquadrant.button && (
+                      <ButtonBorder
+                        text={grid2.fourtquadrant.textbutton}
+                        color="mainText"
+                      />
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
-            <div className="bg-mainBlue w-full py-12 md:py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />
+            ) : (
+              <div className="bg-mainBlue w-full py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />
+            )}
           </div>
         </section>
       )}
-      <section className="widest flex px-4 md:px-0">
-        <div className="inside flex flex-col md:flex-row gap-4 py-24">
-          <h2 className="text-5xl text-mainText font-semibold md:w-4/5">
-            Celebrate
-            <br />
-            with us
-          </h2>
-
-          <div>
-            <p className="text-mainText mb-12 mr-4 md:mr-24">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
-              amet autem perspiciatis fugiat nam rem, corporis in explicabo
-              molestias culpa vitae eveniet, excepturi nulla eum aliquid quos
-              suscipit dolores odio.
-            </p>
-            <ButtonBorder
-              text="Join us"
-              color="mainOrange"
-              // classes="border-mainOrange text-mainOrange !bg-white border-2"
-            />
+      {fullrow2 && (
+        <section className="widest flex px-4 md:px-0">
+          <div className="inside flex flex-col md:flex-row gap-4 py-24">
+            {fullrow2.title && (
+              <h2 className="text-5xl text-mainText font-semibold md:w-4/5">
+                {fullrow2.title}
+              </h2>
+            )}
+            <div>
+              {fullrow2.description && (
+                <p className="text-mainText mb-12 mr-4 md:mr-24">
+                  {fullrow2.description}
+                </p>
+              )}
+              {fullrow2.button && (
+                <ButtonBorder
+                  text={fullrow2.textbutton}
+                  color="mainOrange"
+                  // classes="border-mainOrange text-mainOrange !bg-white border-2"
+                />
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 };
