@@ -46,6 +46,8 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
           - {
               label: Image Slider,
               name: imageslider,
