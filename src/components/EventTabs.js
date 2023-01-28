@@ -1,11 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { Tab } from "@headlessui/react";
+import { Link, graphql, StaticQuery } from "gatsby";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function EventTabs() {
+export function EventTabsTemplate({ data }) {
+  const { edges: events } = data.allMarkdownRemark;
+  const [tags, setTags] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  useEffect(() => {
+    events.map((event) =>
+      setTags((prevState) => [...prevState, ...event.node.frontmatter.tags])
+    );
+  }, [events]);
+
+  console.log(tags, "tagstags");
+
+  let uniqueTags = [...new Set(tags.map((tag) => tag))];
+
+  var currentTime = new Date();
+  var today = currentTime.toLocaleDateString();
+
   let [categories] = useState({
     Recent: [
       {
@@ -59,9 +78,26 @@ export default function EventTabs() {
 
   return (
     <section className="widest">
-      <div className="w-full px-2 py-16 sm:px-0 inside">
-        <Tab.Group>
-          <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+      <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
+        <Tab.List className="flex justify-center inside">
+          {uniqueTags.map((category, id) => (
+            <Tab
+              key={id}
+              className={({ selected }) =>
+                classNames(
+                  "w-full md:w-[unset] hover:text-white border-mainOrange border-x-1 border-2 hover:bg-mainOrange py-2 px-4",
+                  selected && "bg-mainOrange text-white"
+                )
+              }
+            >
+              {category}
+            </Tab>
+          ))}
+          {/* {Object.keys(events).map((category) => (
+             
+            ))} */}
+        </Tab.List>
+        {/* <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
             {Object.keys(categories).map((category) => (
               <Tab
                 key={category}
@@ -78,21 +114,22 @@ export default function EventTabs() {
                 {category}
               </Tab>
             ))}
-          </Tab.List>
-          <Tab.Panels className="mt-2">
+          </Tab.List> */}
+        <Tab.Panels className="border-8 border-mainOrange">
+          <div className="inside">
+            <div className="mt-12 mb-4">
+              <h3 className="text-5xl font-semibold">
+                Happening now{" "}
+                <span className="font-normal text-base">10.20.2023</span>
+              </h3>
+            </div>
             {Object.values(categories).map((posts, idx) => (
-              <Tab.Panel
-                key={idx}
-                className={classNames(
-                  "rounded-xl bg-white p-3",
-                  "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
-                )}
-              >
+              <Tab.Panel key={idx} className={classNames(" bg-white mb-16")}>
                 <ul>
                   {posts.map((post) => (
                     <li
                       key={post.id}
-                      className="relative rounded-md p-3 hover:bg-gray-100"
+                      className="relative rounded-md p-3  hover:bg-gray-100"
                     >
                       <h3 className="text-sm font-medium leading-5">
                         {post.title}
@@ -118,9 +155,62 @@ export default function EventTabs() {
                 </ul>
               </Tab.Panel>
             ))}
-          </Tab.Panels>
-        </Tab.Group>
-      </div>
+            <div className="my-16">
+              <h3 className="text-5xl font-semibold">Upcoming</h3>
+            </div>
+          </div>
+        </Tab.Panels>
+      </Tab.Group>
     </section>
+  );
+}
+
+EventTabs.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+};
+
+export default function EventTabs() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query EventListQuery {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 400)
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  tags
+                  templateKey
+                  date(formatString: "MM/DD/YYYY")
+                  featuredpost
+                  featuredimage {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 120
+                        quality: 100
+                        layout: CONSTRAINED
+                      )
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={(data, count) => <EventTabsTemplate data={data} count={count} />}
+    />
   );
 }

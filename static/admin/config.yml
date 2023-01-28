@@ -13,6 +13,34 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "event"
+    label: "Event"
+    folder: "src/pages/event"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "event-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          options:
+            ["Talks", "Tour", "Exhibitions", "Performance", "Other Activities"],
+          default: ["Talks"],
+        }
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -443,7 +471,7 @@ collections:
     files:
       - label: "Contact Info"
         name: contact_info
-        file: site/settings/contact_info.jason
+        file: site/settings/contact_info.json
         fields:
           - {
               label: "Telephone 1",
