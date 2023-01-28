@@ -18,8 +18,6 @@ export function EventTabsTemplate({ data }) {
     );
   }, [events]);
 
-  console.log(tags, "tagstags");
-
   let uniqueTags = [...new Set(tags.map((tag) => tag))];
 
   var currentTime = new Date();
@@ -79,13 +77,13 @@ export function EventTabsTemplate({ data }) {
   return (
     <section className="widest">
       <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-        <Tab.List className="flex justify-center inside">
+        <Tab.List className="flex overflow-scroll md:justify-center inside">
           {uniqueTags.map((category, id) => (
             <Tab
               key={id}
               className={({ selected }) =>
                 classNames(
-                  "w-full md:w-[unset] hover:text-white border-mainOrange border-x-1 border-2 hover:bg-mainOrange py-2 px-4",
+                  "w-full md:w-[unset] hover:text-white border-mainOrange border-x-1 border-2 hover:bg-mainOrange py-2 min-w-[150px] md:min-w-[unset] md:px-4",
                   selected && "bg-mainOrange text-white"
                 )
               }
@@ -116,11 +114,13 @@ export function EventTabsTemplate({ data }) {
             ))}
           </Tab.List> */}
         <Tab.Panels className="border-8 border-mainOrange">
-          <div className="inside">
+          <div className="inside px-4 md:px-0">
             <div className="mt-12 mb-4">
-              <h3 className="text-5xl font-semibold">
+              <h3 className="text-3xl md:text-5xl font-semibold">
                 Happening now{" "}
-                <span className="font-normal text-base">10.20.2023</span>
+                <span className="font-normal text-base block md:inline">
+                  {today}
+                </span>
               </h3>
             </div>
             {Object.values(categories).map((posts, idx) => (
@@ -129,7 +129,7 @@ export function EventTabsTemplate({ data }) {
                   {posts.map((post) => (
                     <li
                       key={post.id}
-                      className="relative rounded-md p-3  hover:bg-gray-100"
+                      className="relative rounded-md px-1 md:px-3 py-3  hover:bg-gray-300"
                     >
                       <h3 className="text-sm font-medium leading-5">
                         {post.title}
@@ -156,7 +156,7 @@ export function EventTabsTemplate({ data }) {
               </Tab.Panel>
             ))}
             <div className="my-16">
-              <h3 className="text-5xl font-semibold">Upcoming</h3>
+              <h3 className="text-3xl md:text-5xl font-semibold">Upcoming</h3>
             </div>
           </div>
         </Tab.Panels>
