@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
   dots: true,
+  arrows: true,
   infinite: true,
   autoplay: true,
   slidesToShow: 1,
@@ -19,7 +20,10 @@ const SliderTemplate = ({ data }) => {
   const imageData = data.markdownRemark.frontmatter.imageslider;
 
   return (
-    <Slider {...settings} className="overflow-hidden h-[230px] md:h-[600px]">
+    <Slider
+      {...settings}
+      className="overflow-hidden min-h-[230px] h-[230px] md:h-[550px]"
+    >
       {imageData.image1 && (
         <Img fluid={imageData.image1.image.childrenImageSharp[0].fluid} />
       )}
