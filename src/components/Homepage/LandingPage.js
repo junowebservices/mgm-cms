@@ -3,7 +3,7 @@ import Features from "../Features";
 import BlogRoll from "../BlogRoll";
 import FullWidthImage from "../FullWidthImage";
 import LatestNews from "../LatestNews";
-import Slider from "../Slider";
+import SliderCarousell from "../SliderCarousell";
 import Card from "../Card";
 import ButtonContained from "../ButtonContained";
 import EventTabs from "../EventTabs";
@@ -32,10 +32,10 @@ const LandingPage = ({
 
   return (
     <div>
-      {/* <Slider /> */}
-      <div className="h-[600px] overflow-hidden w-full grid">
+      {/* <SliderCarousell /> */}
+      {/* <div className="h-[600px] overflow-hidden w-full grid">
         <PreviewCompatibleImage imageInfo={image} />
-      </div>
+      </div> */}
       {grid && (
         <section className="inside my-8 px-4 md:px-0">
           <div className="grid md:grid-cols-2 place-items-center ">

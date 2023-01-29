@@ -77,7 +77,7 @@ export function EventTabsTemplate({ data }) {
   return (
     <section className="widest">
       <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-        <Tab.List className="flex overflow-scroll md:justify-center inside">
+        <Tab.List className="flex overflow-scroll md:overflow-auto md:justify-center inside">
           {uniqueTags.map((category, id) => (
             <Tab
               key={id}

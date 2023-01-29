@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 
 import HomePage from "../components/Homepage/LandingPage";
+import SliderCarousell from "../components/SliderCarousell";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,6 +21,7 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
   return (
     <>
+      <SliderCarousell />
       <HomePage
         title={title}
         image={image}
