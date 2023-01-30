@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        arial: ["Arial", "sans-serif"],
       },
     },
   },

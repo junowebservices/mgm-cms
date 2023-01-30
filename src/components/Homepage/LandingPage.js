@@ -13,6 +13,7 @@ import CelebrateWithUs from "../CelebrateWithUs";
 import ButtonBorder from "../ButtonBorder";
 import { getImage } from "gatsby-plugin-image";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import GridSquare from "../GridSquare";
 
 const LandingPage = ({
   title,
@@ -38,9 +39,15 @@ const LandingPage = ({
       </div> */}
       {grid && (
         <section className="inside my-8 px-4 md:px-0">
-          <div className="grid md:grid-cols-2 place-items-center ">
+          <GridSquare
+            firstquadrant={grid.firstquadrant}
+            secondquadrant={grid.secondquadrant}
+            thirdquadrant={grid.thirdquadrant}
+            fourtquadrant={grid.fourtquadrant}
+          />
+          {/* <div className="grid md:grid-cols-2 place-items-center ">
             {grid.firstquadrant.title.length > 1 ? (
-              <div className="w-full py-12 md:h-[400px] bg-mainOrange grid place-items-center border-2 border-b-0 border-mainText">
+              <div className="w-full py-12 aspect-square bg-mainOrange grid place-items-center border-2 border-b-0 border-mainText">
                 {grid.firstquadrant && (
                   <div className="text-center px-4 md:px-12">
                     <h3 className="text-4xl mb-4">
@@ -57,10 +64,10 @@ const LandingPage = ({
                 )}
               </div>
             ) : (
-              <div className="bg-mainOrange w-full py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" />
+              <div className="bg-mainOrange w-full py-12 aspect-square border-2 border-b-0 border-mainText hidden md:block" />
             )}
 
-            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+            <div className="w-full py-12 aspect-square bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
               {grid.secondquadrant && (
                 <div className="text-center px-4 md:px-12">
                   <h3 className="text-4xl mb-4">{grid.secondquadrant.title}</h3>
@@ -74,7 +81,7 @@ const LandingPage = ({
                 </div>
               )}
             </div>
-            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
+            <div className="w-full py-12 aspect-square bg-white grid place-items-center border-2 border-mainText">
               {grid.thirdquadrant && (
                 <div className="text-center px-4 md:px-12">
                   <h3 className="text-4xl mb-4">{grid.thirdquadrant.title}</h3>
@@ -89,7 +96,7 @@ const LandingPage = ({
               )}
             </div>
             {grid.fourtquadrant.title.length > 1 ? (
-              <div className="w-full py-12 md:h-[400px] bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
+              <div className="w-full py-12 aspect-square bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
                 {grid.fourtquadrant && (
                   <div className="text-center px-4 md:px-12">
                     <h3 className="text-4xl mb-4">
@@ -106,9 +113,9 @@ const LandingPage = ({
                 )}
               </div>
             ) : (
-              <div className="bg-mainBlue w-full py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />
+              <div className="bg-mainBlue w-full py-12 aspect-square border-2 border-l-0 border-mainText hidden md:block" />
             )}
-          </div>
+          </div> */}
         </section>
       )}
 
@@ -136,9 +143,9 @@ const LandingPage = ({
       </section> */}
       <EventTabs />
       {fullrow && (
-        <section className="bg-mainOrange widest text-white h-[650px] md:h-[500px] flex px-4 md:px-0">
+        <section className="bg-mainOrange widest text-white h-[650px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
-            <h2 className="text-5xl text-white col-span-2 md:w-[200px]">
+            <h2 className="text-5xl text-white col-span-2 md:w-4/5">
               {fullrow.title}
             </h2>
 
@@ -152,16 +159,22 @@ const LandingPage = ({
         </section>
       )}
       {grid2 && (
-        <section className="inside -mt-24 mb-8 px-4 md:px-0">
-          <div className="grid md:grid-cols-2 place-items-center ">
+        <section className="inside -mt-16 mb-8 px-4 md:px-0">
+          <GridSquare
+            firstquadrant={grid2.firstquadrant}
+            secondquadrant={grid2.secondquadrant}
+            thirdquadrant={grid2.thirdquadrant}
+            fourtquadrant={grid2.fourtquadrant}
+          />
+          {/* <div className="grid md:grid-cols-2 place-items-center ">
             {grid2.firstquadrant.title.length > 1 ? (
-              <div className="w-full py-12 md:h-[400px] bg-mainYellow grid place-items-center border-2 border-b-0 border-mainText">
+              <div className="w-full py-12 aspect-square bg-mainYellow grid place-items-center border-2 border-b-0 border-mainText">
                 {grid2.firstquadrant && (
                   <div className="text-center px-4 md:px-12">
-                    <h3 className="text-4xl mb-4">
-                      {grid2.firstquadrant.title}
-                    </h3>
-                    <p className="mb-6">{grid2.firstquadrant.description}</p>
+                    <h3 className="text-5xl">{grid2.firstquadrant.title}</h3>
+                    <p className="mt-4 text-2xl">
+                      {grid2.firstquadrant.description}
+                    </p>
                     {grid2.firstquadrant.button && (
                       <ButtonBorder
                         text={grid2.firstquadrant.textbutton}
@@ -172,10 +185,10 @@ const LandingPage = ({
                 )}
               </div>
             ) : (
-              <div className="bg-mainYellow w-full py-12 md:h-[400px] border-2 border-b-0 border-mainText hidden md:block" />
+              <div className="bg-mainYellow w-full py-12 aspect-square border-2 border-b-0 border-mainText hidden md:block" />
             )}
 
-            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
+            <div className="w-full py-12 aspect-square bg-white grid place-items-center border-2 md:border-l-0 border-b-0 border-mainText">
               {grid2.secondquadrant && (
                 <div className="text-center px-4 md:px-12">
                   <h3 className="text-4xl mb-4">
@@ -191,7 +204,7 @@ const LandingPage = ({
                 </div>
               )}
             </div>
-            <div className="w-full py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
+            <div className="w-full py-12 aspect-square bg-white grid place-items-center border-2 border-mainText">
               {grid2.thirdquadrant && (
                 <div className="text-center px-4 md:px-12">
                   <h3 className="text-4xl mb-4">{grid2.thirdquadrant.title}</h3>
@@ -206,7 +219,7 @@ const LandingPage = ({
               )}
             </div>
             {grid2.fourtquadrant.title.length > 1 ? (
-              <div className="w-full py-12 md:h-[400px] bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
+              <div className="w-full py-12 aspect-square bg-mainBlue grid place-items-center border-2 border-l-0 border-mainText">
                 {grid2.fourtquadrant && (
                   <div className="text-center px-4 md:px-12">
                     <h3 className="text-4xl mb-4">
@@ -223,9 +236,9 @@ const LandingPage = ({
                 )}
               </div>
             ) : (
-              <div className="bg-mainBlue w-full py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />
+              <div className="bg-mainBlue w-full py-12 aspect-square border-2 border-l-0 border-mainText hidden md:block" />
             )}
-          </div>
+          </div> */}
         </section>
       )}
       {fullrow2 && (
