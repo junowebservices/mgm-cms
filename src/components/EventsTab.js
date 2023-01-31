@@ -86,7 +86,8 @@ const EventsTab = () => {
             >
               <div className="max-w-screen-xl mx-auto">
                 <h2 className="text-5xl pb-6">
-                  Happening Now <span className="text-lg">10.00.2023</span>
+                  Calendar of Activities{" "}
+                  <span className="text-lg">10.00.2023</span>
                 </h2>
 
                 <ul className="block">

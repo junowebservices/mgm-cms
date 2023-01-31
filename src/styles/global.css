@@ -10,7 +10,7 @@
     @apply font-roboto;
   }
   p {
-    @apply text-sm md:text-lg font-roboto text-mainText;
+    @apply font-roboto text-mainText;
   }
 
   h2,

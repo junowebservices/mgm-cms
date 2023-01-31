@@ -145,7 +145,7 @@ const LandingPage = ({
       {fullrow && (
         <section className="bg-mainOrange widest text-white h-[650px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
-            <h2 className="text-5xl text-white col-span-2 md:w-4/5">
+            <h2 className="text-4xl text-white col-span-2 md:w-4/5">
               {fullrow.title}
             </h2>
 
@@ -171,7 +171,7 @@ const LandingPage = ({
               <div className="w-full py-12 aspect-square bg-mainYellow grid place-items-center border-2 border-b-0 border-mainText">
                 {grid2.firstquadrant && (
                   <div className="text-center px-4 md:px-12">
-                    <h3 className="text-5xl">{grid2.firstquadrant.title}</h3>
+                    <h3 className="text-4xl">{grid2.firstquadrant.title}</h3>
                     <p className="mt-4 text-2xl">
                       {grid2.firstquadrant.description}
                     </p>
@@ -245,9 +245,25 @@ const LandingPage = ({
         <section className="widest flex px-4 md:px-0">
           <div className="inside flex flex-col md:flex-row gap-4 py-24">
             {fullrow2.title && (
-              <h2 className="text-5xl text-mainText font-semibold md:w-4/5">
-                {fullrow2.title}
-              </h2>
+              <div className="md:w-4/5">
+                <h2 className="text-4xl text-mainText font-semibold">
+                  {fullrow2.title}
+                </h2>
+                <div className="space-y-2 mt-4">
+                  <div>
+                    <ButtonBorder
+                      text="Participate as Agency"
+                      color="mainText"
+                    />
+                  </div>
+                  <div>
+                    <ButtonBorder
+                      text="Participate as Individual"
+                      color="mainText"
+                    />
+                  </div>
+                </div>
+              </div>
             )}
             <div>
               {fullrow2.description && (

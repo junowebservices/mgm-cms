@@ -78,7 +78,7 @@ const Footer = () => {
                   About
                 </Link>
               </div>
-              <div>
+              {/* <div>
                 <Link to="/" className="text-mainOrange">
                   Program
                 </Link>
@@ -92,9 +92,9 @@ const Footer = () => {
                 <Link to="/" className="text-mainOrange">
                   Contact
                 </Link>
-              </div>
+              </div> */}
             </div>
-            <div>
+            {/* <div>
               <div>
                 <Link to="/faq" className="text-mainOrange">
                   FAQ
@@ -105,7 +105,7 @@ const Footer = () => {
                   Archives
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <h3 className="text-lg font-semibold hidden md:block">Search</h3>

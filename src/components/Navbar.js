@@ -26,11 +26,11 @@ const Navbar = () => {
     <div className="widest">
       <div className="bg-gray-100 py-2 px-4 md:px-0">
         <div className="flex justify-between items-center inside">
-          <p className="text-xs md:text-sm font-arial">GOVPH</p>
+          <p className="text-xs font-arial">GOVPH</p>
           <div className="flex md:gap-8 md:mr-6 ">
             <Accessibility />
             <div className="hidden md:flex items-center ">
-              <Link className="text-sm text-mainText font-arial" to="/contact">
+              <Link className="text-xs text-mainText font-arial" to="/contact">
                 Contact Us
               </Link>
             </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex justify-between inside py-3">
+      <div className="hidden md:flex justify-between inside py-2">
         <Link to="/">
           <img className="h-16 md:h-24 px-4" src={logoColored} alt="Logo" />
         </Link>
@@ -100,7 +100,7 @@ const Navbar = () => {
               </a>
             )}
           </div>
-          <div className="grid mt-2 space-x-12 place-content-end">
+          <div className="flex mt-2 space-x-12 items-center">
             <Link
               className={`${path === "/" && "font-bold"} text-mainText text-sm`}
               to="/"
@@ -108,10 +108,12 @@ const Navbar = () => {
               HOME
             </Link>
             <Link
-              className={`${path === "/about" && "font-bold"} text-mainText`}
+              className={`${
+                path === "/about" && "font-bold"
+              } text-mainText text-sm`}
               to="/about"
             >
-              About
+              ABOUT
             </Link>
             {/* <Link
               className={`${path === "/calendar" && "font-bold"} text-mainText`}
