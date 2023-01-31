@@ -143,7 +143,7 @@ const LandingPage = ({
       </section> */}
       <EventTabs />
       {fullrow && (
-        <section className="bg-mainOrange widest text-white h-[650px] md:h-[400px] flex px-4 md:px-0">
+        <section className="bg-mainOrange widest text-white h-[550px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
             <h2 className="text-4xl text-white col-span-2 md:w-4/5">
               {fullrow.title}
@@ -243,7 +243,7 @@ const LandingPage = ({
       )}
       {fullrow2 && (
         <section className="widest flex px-4 md:px-0">
-          <div className="inside flex flex-col md:flex-row gap-4 py-24">
+          <div className="inside flex flex-col md:flex-row gap-4 py-6 md:py-24">
             {fullrow2.title && (
               <div className="md:w-4/5">
                 <h2 className="text-4xl text-mainText font-semibold">

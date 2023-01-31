@@ -48,7 +48,8 @@ grid:
     textbutton: " "
 fullrow:
   title: Museums and Galleries Month (MGM)
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description:
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores
   button: true
@@ -81,7 +82,8 @@ grid2:
     textbutton: " "
 fullrow2:
   title: Celebrate with Us. Awesome!
-  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
+  description:
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi amet
     autem perspiciatis fugiat nam rem, corporis in explicabo molestias culpa
     vitae eveniet, excepturi nulla eum aliquid quos suscipit dolores odio.
   button: true

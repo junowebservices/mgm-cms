@@ -24,15 +24,8 @@
     @apply mx-auto max-w-screen-xl px-0 md:px-9;
   }
 }
-
 .slick-arrow {
   z-index: 1;
-}
-.slick-prev {
-  margin-left: 35px;
-}
-.slick-next {
-  margin-right: 35px;
 }
 .slick-dots {
   z-index: 1;
