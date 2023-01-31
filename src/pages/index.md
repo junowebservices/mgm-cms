@@ -4,20 +4,20 @@ title: Sample
 image: /img/products-full-width.jpg
 imageslider:
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: https://images.unsplash.com/photo-1554907984-15263bfd63bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
+    alt: sample image
+    image: /img/sample-2.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/4b/da/02/20161002-145508-largejpg.jpg?w=1200&h=1200&s=1
+    alt: sample image
+    image: /img/sample-4.jpg
   image3:
-    alt: Coffee sa
-    image: https://upload.wikimedia.org/wikipedia/commons/a/a4/National_Museum_%28Padre_Burgos%2C_Manila%3B_01-01-2020%29.jpg
+    alt: sample image
+    image: /img/sample-3.jpeg
   image4:
-    alt: Coffee 22
-    image: https://weblinks.nationalmuseum.gov.ph/wp-content/uploads/2022/04/01111721/277989043_474221821103554_4647712789938802966_n.jpeg
+    alt: sample image
+    image: /img/sample.jpg
   image5:
-    alt: sample
-    image: https://upload.wikimedia.org/wikipedia/commons/f/f8/National_Museum_of_National_History_%28Manila%29_in_2019.jpg
+    alt: sample image
+    image: /img/sample-1.jpg
 grid:
   title: " "
   firstquadrant:
