@@ -1,38 +1,25 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2023-01-28T05:44:03.545Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by
-  coffee tasters, has been revised for the first time this year.
+title: The Intriguing Beauty of John Singer Sargent's "Portrait of a Lady
+date: 2023-02-09T09:33:16.070Z
+description: >+
+  John Singer Sargent was one of the leading portrait artists of the late 19th
+  and early 20th centuries, and "Portrait of a Lady" is considered one of his
+  greatest works. The painting, which was created around 1888, features an
+  elegantly dressed woman seated in a plush armchair, with a serene expression
+  on her face.
+
 featuredpost: true
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: https://images.summitmedia-digital.com/esquiremagph/images/2017/01/20/paintingcover.png
 tags:
-  - flavor
-  - tasting
+  - painting
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+John Singer Sargent was one of the leading portrait artists of the late 19th and early 20th centuries, and "Portrait of a Lady" is considered one of his greatest works. The painting, which was created around 1888, features an elegantly dressed woman seated in a plush armchair, with a serene expression on her face.
 
+One of the most striking features of "Portrait of a Lady" is the subject's attire. The woman is dressed in an elaborate, full-length dress that was fashionable during the Victorian era. The dress is adorned with intricate lace and beading, and the colors are rich and luxurious. The subject's jewelry is also notable, with her pearl necklace and earrings adding a touch of elegance to the painting.
 
+Another notable aspect of "Portrait of a Lady" is Sargent's use of light and shadow. The painting is lit from the left, which creates a sense of depth and three-dimensionality. The subject's face is bathed in light, highlighting her delicate features and the serene expression on her face. The shadows add a sense of mystery and intrigue to the painting, as the subject's eyes are partially hidden by her hair.
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+The subject of "Portrait of a Lady" is not known, and her identity remains a mystery to this day. This has added to the painting's allure and has sparked speculation about who she might have been. Some art historians believe that she was a society lady, while others think she might have been a member of Sargent's family. Regardless of her identity, the subject is widely regarded as one of the most beautiful and captivating figures in art history.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
-
-![Coffee](/img/products-grid1.jpg)
-
-## What the updates mean to you
-
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
-
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
-
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+In conclusion, "Portrait of a Lady" by John Singer Sargent is a stunning example of his mastery as a portrait artist. The painting's beauty and mystery have captivated art lovers for over a century, and it continues to be one of Sargent's most popular works. Whether you are an art historian, an admirer of Victorian fashion, or just someone who appreciates beautiful paintings, "Portrait of a Lady" is a must-see work of art.
