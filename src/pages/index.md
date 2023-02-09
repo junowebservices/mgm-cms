@@ -57,10 +57,10 @@ fullrow:
 grid2:
   title: " "
   firstquadrant:
-    title: First Quadrant
-    description: "Sample of the first Quadrant "
-    button: true
-    textbutton: " Sample"
+    title: ""
+    description: ""
+    button: false
+    textbutton: ""
   secondquadrant:
     title: Embracing Uncertainly
     description: >

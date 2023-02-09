@@ -8,6 +8,7 @@ import Layout from "../components/Layout";
 import HomePage from "../components/Homepage/LandingPage";
 import SliderCarousell from "../components/SliderCarousell";
 import mgmTheme from "../../site/settings/theme";
+import MuiEventTabs from "../components/MuiEventTabs";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -22,15 +23,16 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
   return (
     <>
-      <SliderCarousell />
-      <HomePage
+      {/* <SliderCarousell /> */}
+      <MuiEventTabs />
+      {/* <HomePage
         title={title}
         image={image}
         grid={grid}
         fullrow={fullrow}
         grid2={grid2}
         fullrow2={fullrow2}
-      />
+      /> */}
       {/* <section className="section section--gradient">
         <div className="container">
           <div className="section">

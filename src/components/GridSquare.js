@@ -16,7 +16,9 @@ const GridSquare = ({
       >
         {firstquadrant && (
           <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl">{firstquadrant.title}</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">
+              {firstquadrant.title}
+            </h3>
             <p className="mt-5">{firstquadrant.description}</p>
             {firstquadrant.textbutton.length > 1 && (
               <div className="mt-5">
@@ -36,7 +38,9 @@ const GridSquare = ({
       >
         {secondquadrant && (
           <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl">{secondquadrant.title}</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">
+              {secondquadrant.title}
+            </h3>
             <p className="mt-5">{secondquadrant.description}</p>
             {secondquadrant.textbutton.length > 1 && (
               <div className="mt-5">
@@ -56,7 +60,9 @@ const GridSquare = ({
       >
         {thirdquadrant && (
           <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl">{thirdquadrant.title}</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">
+              {thirdquadrant.title}
+            </h3>
             <p className="mt-5">{thirdquadrant.description}</p>
             {thirdquadrant.textbutton.length > 1 && (
               <div className="mt-5">
@@ -75,7 +81,9 @@ const GridSquare = ({
       >
         {fourtquadrant && (
           <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl">{fourtquadrant.title}</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">
+              {fourtquadrant.title}
+            </h3>
             <p className="mt-5">{fourtquadrant.description}</p>
             {fourtquadrant.textbutton.length > 1 && (
               <div className="mt-5">

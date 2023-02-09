@@ -146,7 +146,7 @@ const LandingPage = ({
       {fullrow && (
         <section className="bg-mainOrange widest text-white h-[550px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
-            <h2 className="text-4xl text-white col-span-2 md:w-4/5">
+            <h2 className="text-4xl text-white col-span-2 md:w-4/5 font-bold">
               {fullrow.title}
             </h2>
 
@@ -243,6 +243,31 @@ const LandingPage = ({
         </section>
       )}
       {fullrow2 && (
+        <section className="widesth-[550px] md:h-[400px] flex px-4 md:px-0">
+          <div className="inside grid md:grid-cols-5 py-24">
+            <div className="col-span-2">
+              <h2 className="text-4xl md:w-4/5 font-bold">{fullrow2.title}</h2>
+              <div className="mt-4">
+                <div>
+                  <Button>Participate as Agency</Button>
+                </div>
+                <div>
+                  <Button>Participate as Individual</Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-span-3">
+              <p className="mb-12">{fullrow2.description}</p>
+              {fullrow2.textbutton && (
+                <ButtonBorder text={fullrow2.textbutton} />
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* {fullrow2 && (
         <section className="widest flex px-4 md:px-0">
           <div className="inside flex flex-col md:flex-row gap-4 py-6 md:py-24">
             {fullrow2.title && (
@@ -250,7 +275,7 @@ const LandingPage = ({
                 <h2 className="text-4xl text-mainText font-semibold">
                   {fullrow2.title}
                 </h2>
-                <div className="space-y-2 mt-4">
+                <div className="mt-4">
                   <div>
                     <Button>Participate as Agency</Button>
                   </div>
@@ -262,7 +287,7 @@ const LandingPage = ({
             )}
             <div>
               {fullrow2.description && (
-                <p className="text-mainText mb-12 mr-4 md:mr-24">
+                <p className="text-mainText mb-8 mr-4 md:mr-24">
                   {fullrow2.description}
                 </p>
               )}
@@ -276,7 +301,7 @@ const LandingPage = ({
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </div>
   );
 };
