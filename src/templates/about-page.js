@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Sample from "../components/Sample";
-import ButtonBorder from "../components/ButtonBorder";
 import Header from "../components/about/Header";
 
 // eslint-disable-next-line

@@ -77,7 +77,7 @@ const SliderTemplate = ({ data }) => {
   );
 };
 
-export default function SliderCarousell(props) {
+export default function SliderCarousel(props) {
   return (
     <StaticQuery
       query={graphql`

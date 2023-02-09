@@ -20,5 +20,5 @@ module.exports = {
       },
     },
   },
-  plugins: ["gatsby-plugin-postcss"],
+  plugins: ["gatsby-plugin-postcss", require("@tailwindcss/line-clamp")],
 };

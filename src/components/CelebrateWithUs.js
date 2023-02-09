@@ -20,7 +20,6 @@ const CelebrateWithUs = () => {
           </p>
           <ButtonBorder
             text="Join us"
-            color="mainOrange"
             // classes="border-mainOrange text-mainOrange !bg-white border-2"
           />
         </div>

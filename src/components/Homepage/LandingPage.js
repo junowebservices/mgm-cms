@@ -3,7 +3,7 @@ import Features from "../Features";
 import BlogRoll from "../BlogRoll";
 import FullWidthImage from "../FullWidthImage";
 import LatestNews from "../LatestNews";
-import SliderCarousell from "../SliderCarousell";
+import SliderCarousell from "../SliderCarousel";
 import Card from "../Card";
 import ButtonContained from "../ButtonContained";
 import EventTabs from "../EventTabs";
@@ -15,6 +15,7 @@ import { getImage } from "gatsby-plugin-image";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import GridSquare from "../GridSquare";
 import { Button } from "@mui/material";
+import MuiEventTabs from "../MuiEventTabs";
 
 const LandingPage = ({
   title,
@@ -142,7 +143,7 @@ const LandingPage = ({
           <ButtonContained text="read more" color="mainOrange" />
         </div>
       </section> */}
-      <EventTabs />
+      <MuiEventTabs />
       {fullrow && (
         <section className="bg-mainOrange widest text-white h-[550px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
@@ -152,9 +153,7 @@ const LandingPage = ({
 
             <div className="col-span-3">
               <p className="text-white mb-12">{fullrow.description}</p>
-              {fullrow.button && (
-                <ButtonBorder text={fullrow.textbutton} color="white" />
-              )}
+              {fullrow.button && <ButtonBorder text={fullrow.textbutton} />}
             </div>
           </div>
         </section>

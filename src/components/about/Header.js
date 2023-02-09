@@ -65,7 +65,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi eaque
               </p>
-              <ButtonBorder text="see more" color="mainOrange" />
+              <ButtonBorder text="see more" />
             </div>
           </div>
           <div className="bg-mainOrange grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -78,7 +78,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi eaque
               </p>
-              <ButtonBorder text="join us" color="white" />
+              <ButtonBorder text="join us" />
             </div>
           </div>
           <div className="bg-mainYellow grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -90,7 +90,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi Modi voluptas plac
               </p>
-              <ButtonBorder text="find us" color="white" />
+              <ButtonBorder text="find us" />
             </div>
           </div>
           <div className="bg-mainBlue grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -102,7 +102,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis ? Modi voluptas plac
               </p>
-              <ButtonBorder text="contact us" color="white" />
+              <ButtonBorder text="contact us" />
             </div>
           </div>
         </div>

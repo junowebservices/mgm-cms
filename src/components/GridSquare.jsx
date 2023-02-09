@@ -22,10 +22,7 @@ const GridSquare = ({
             <p className="mt-5">{firstquadrant.description}</p>
             {firstquadrant.textbutton.length > 1 && (
               <div className="mt-5">
-                <ButtonBorder
-                  text={firstquadrant.textbutton}
-                  color="mainText"
-                />
+                <ButtonBorder text={firstquadrant.textbutton} />
               </div>
             )}
           </div>
@@ -44,10 +41,7 @@ const GridSquare = ({
             <p className="mt-5">{secondquadrant.description}</p>
             {secondquadrant.textbutton.length > 1 && (
               <div className="mt-5">
-                <ButtonBorder
-                  text={secondquadrant.textbutton}
-                  color="mainText"
-                />
+                <ButtonBorder text={secondquadrant.textbutton} />
               </div>
             )}
           </div>
@@ -66,10 +60,7 @@ const GridSquare = ({
             <p className="mt-5">{thirdquadrant.description}</p>
             {thirdquadrant.textbutton.length > 1 && (
               <div className="mt-5">
-                <ButtonBorder
-                  text={thirdquadrant.textbutton}
-                  color="mainText"
-                />
+                <ButtonBorder text={thirdquadrant.textbutton} />
               </div>
             )}
           </div>
@@ -87,10 +78,7 @@ const GridSquare = ({
             <p className="mt-5">{fourtquadrant.description}</p>
             {fourtquadrant.textbutton.length > 1 && (
               <div className="mt-5">
-                <ButtonBorder
-                  text={fourtquadrant.textbutton}
-                  color="mainText"
-                />
+                <ButtonBorder text={fourtquadrant.textbutton} />
               </div>
             )}
           </div>

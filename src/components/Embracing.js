@@ -13,7 +13,7 @@ const Embracing = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
               quaerat obcaecati sunt amet atque nobis modi eaque reiciendis,
             </p>
-            <ButtonBorder text="explore" color="mainOrange" />
+            <ButtonBorder text="explore" />
           </div>
         </div>
         <div className="w-full py-12 md:py-12 md:h-[400px] bg-white grid place-items-center border-2 border-mainText">
@@ -23,7 +23,7 @@ const Embracing = () => {
               adipisicing elit. Eum, quidem voluptate! Repudiandae a autem
               asperiores esse incidunt
             </p>
-            <ButtonBorder text="see more" color="mainOrange" />
+            <ButtonBorder text="see more" />
           </div>
         </div>
         <div className="bg-mainBlue w-full py-12 md:py-12 md:h-[400px] border-2 border-l-0 border-mainText hidden md:block" />

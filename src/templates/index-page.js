@@ -6,9 +6,11 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 
 import HomePage from "../components/Homepage/LandingPage";
-import SliderCarousell from "../components/SliderCarousell";
+import SliderCarousell from "../components/SliderCarousel";
 import mgmTheme from "../../site/settings/theme";
 import MuiEventTabs from "../components/MuiEventTabs";
+import MuiCardImage from "../components/MuiCardImage";
+import BlogRoll from "../components/BlogRoll";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -23,8 +25,16 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
   return (
     <>
-      {/* <SliderCarousell /> */}
-      <MuiEventTabs />
+      <SliderCarousell />
+
+      <BlogRoll />
+      {/* <section className="widest ">
+        <div className="inside grid md:grid-cols-3 place-items-center">
+          <MuiCardImage />
+          <MuiCardImage />
+          <MuiCardImage />
+        </div>
+      </section> */}
       {/* <HomePage
         title={title}
         image={image}

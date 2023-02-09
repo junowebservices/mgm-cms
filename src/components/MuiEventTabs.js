@@ -19,7 +19,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -87,6 +87,9 @@ export default function MuiEventTabs() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
+  var currentTime = new Date();
+  var today = currentTime.toLocaleDateString();
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -105,16 +108,22 @@ export default function MuiEventTabs() {
           <StyledTab label="Item Three" {...a11yProps(2)} />
         </StyledTabs>
       </Box>
-      <div className="border-4 border-mainOrange">
-        <TabPanel value={value} index={0}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel>
+      <div className="border-4 border-mainOrange widest">
+        <div className="inside py-8">
+          <h3 className="text-3xl md:text-4xl font-semibold">
+            Calendar of Activities
+          </h3>
+          <p className="font-normal text-base block md:inline">{today}</p>
+          <TabPanel value={value} index={0}>
+            Item One
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            Item Two
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            Item Three
+          </TabPanel>
+        </div>
       </div>
     </Box>
   );
