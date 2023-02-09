@@ -10,7 +10,7 @@ description: >+
   on her face.
 
 featuredpost: true
-featuredimage: https://images.summitmedia-digital.com/esquiremagph/images/2017/01/20/paintingcover.png
+featuredimage: https://4.bp.blogspot.com/-WiGqpgDvld0/Vk55Hz7TMvI/AAAAAAAAAh8/RQp48B-cQ9Q/s1600/13-portrait-of-paz-pardo-de-tavera.jpg
 tags:
   - painting
 ---
