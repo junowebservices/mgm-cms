@@ -14,6 +14,7 @@ import ButtonBorder from "../ButtonBorder";
 import { getImage } from "gatsby-plugin-image";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import GridSquare from "../GridSquare";
+import { Button } from "@mui/material";
 
 const LandingPage = ({
   title,
@@ -251,16 +252,10 @@ const LandingPage = ({
                 </h2>
                 <div className="space-y-2 mt-4">
                   <div>
-                    <ButtonBorder
-                      text="Participate as Agency"
-                      color="mainText"
-                    />
+                    <Button>Participate as Agency</Button>
                   </div>
                   <div>
-                    <ButtonBorder
-                      text="Participate as Individual"
-                      color="mainText"
-                    />
+                    <Button>Participate as Individual</Button>
                   </div>
                 </div>
               </div>

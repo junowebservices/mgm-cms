@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 
 import HomePage from "../components/Homepage/LandingPage";
 import SliderCarousell from "../components/SliderCarousell";
+import mgmTheme from "../../site/settings/theme";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
