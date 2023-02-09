@@ -34,7 +34,7 @@ export default function MuiCardImage({ id, image, title, desc }) {
             gutterBottom
             variant="h5"
             component="div"
-            className="line-clamp-2"
+            className="line-clamp-1"
           >
             {title}
           </Typography>

@@ -143,6 +143,7 @@ const LandingPage = ({
           <ButtonContained text="read more" color="mainOrange" />
         </div>
       </section> */}
+      <BlogRoll />
       <MuiEventTabs />
       {fullrow && (
         <section className="bg-mainOrange widest text-white h-[550px] md:h-[400px] flex px-4 md:px-0">

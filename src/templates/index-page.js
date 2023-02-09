@@ -26,8 +26,6 @@ export const IndexPageTemplate = ({
   return (
     <>
       <SliderCarousell />
-
-      <BlogRoll />
       {/* <section className="widest ">
         <div className="inside grid md:grid-cols-3 place-items-center">
           <MuiCardImage />
@@ -35,14 +33,14 @@ export const IndexPageTemplate = ({
           <MuiCardImage />
         </div>
       </section> */}
-      {/* <HomePage
+      <HomePage
         title={title}
         image={image}
         grid={grid}
         fullrow={fullrow}
         grid2={grid2}
         fullrow2={fullrow2}
-      /> */}
+      />
       {/* <section className="section section--gradient">
         <div className="container">
           <div className="section">

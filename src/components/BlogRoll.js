@@ -13,17 +13,19 @@ class BlogRollTemplate extends React.Component {
       <section className="widest my-4 md:my-12">
         <div className="inside grid gap-4 md:grid-cols-3 place-items-center">
           {posts &&
-            posts.map(
-              ({ node: post }) =>
-                post.frontmatter.featuredpost && (
-                  <MuiCardImage
-                    id={post.id}
-                    image={post.frontmatter?.featuredimage}
-                    title={post.frontmatter.title}
-                    desc={post.excerpt}
-                  />
-                )
-            )}
+            posts
+              .slice(0, 3)
+              .map(
+                ({ node: post }) =>
+                  post.frontmatter.featuredpost && (
+                    <MuiCardImage
+                      id={post.id}
+                      image={post.frontmatter?.featuredimage}
+                      title={post.frontmatter.title}
+                      desc={post.excerpt}
+                    />
+                  )
+              )}
         </div>
       </section>
       // <div className="columns is-multiline">
