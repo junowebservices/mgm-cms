@@ -5,23 +5,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  * {
-    @apply font-roboto;
-  }
-  p {
-    @apply font-roboto text-mainText;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fafcff;
+  font-family: Roboto, sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
   h2,
   h3 {
-    @apply font-playfair text-mainText;
+    @apply font-Playfair;
   }
   .widest {
     @apply max-w-screen-2xl mx-auto;
   }
   .inside {
-    @apply mx-auto max-w-screen-xl px-0 md:px-9;
+    @apply mx-auto lg:w-9/12 px-4 lg:px-0;
   }
 }
 .slick-arrow {

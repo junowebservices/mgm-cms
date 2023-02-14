@@ -2,30 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import MuiCardImage from "./MuiCardImage";
+import CardMgm from "./CardMgm";
+import ButtonMgm from "./ButtonMgm";
 
 class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log(posts, "wwwposts");
+
     return (
-      <section className="widest my-4 md:my-12">
-        <div className="inside grid gap-4 md:grid-cols-3 place-items-center">
-          {posts &&
-            posts
-              .slice(0, 3)
-              .map(
-                ({ node: post }) =>
-                  post.frontmatter.featuredpost && (
-                    <MuiCardImage
-                      id={post.id}
-                      image={post.frontmatter?.featuredimage}
-                      title={post.frontmatter.title}
-                      desc={post.excerpt}
-                    />
-                  )
-              )}
+      <section className="widest my-4 ">
+        <div className="inside text-center md:my-12">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 place-items-center">
+            {posts &&
+              posts
+                .slice(0, 3)
+                .map(
+                  ({ node: post }) =>
+                    post.frontmatter.featuredpost && (
+                      <CardMgm
+                        key={post.id}
+                        image={post.frontmatter?.featuredimage}
+                        title={post.frontmatter.title}
+                        desc={post.excerpt}
+                      />
+                    )
+                )}
+          </div>
+          <div className="mt-4">
+            <ButtonMgm text="View more" contained />
+          </div>
         </div>
       </section>
       // <div className="columns is-multiline">

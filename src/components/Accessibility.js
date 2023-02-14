@@ -8,7 +8,7 @@ const Accessibility = () => {
     <div className="w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center md:px-4 text-xs text-mainText font-arial ">
+          <Menu.Button className="inline-flex w-full justify-center md:px-4 text-xs text-mainText font-Arial ">
             Accessibility Statement
             <ChevronDownIcon
               className="ml-2 -mr-1 h-4 w-4 md:h-5 md:w-5 text-mainText"
@@ -32,7 +32,7 @@ const Accessibility = () => {
                   <button
                     className={`${
                       active ? "bg-mainOrange text-white" : "text-mainText"
-                    } group flex w-full rounded-md px-2 py-2 text-xs justify-end items-end font-arial`}
+                    } group flex w-full rounded-md px-2 py-2 text-xs justify-end items-end font-Arial`}
                   >
                     {/* {active ? (
                       <EditActiveIcon

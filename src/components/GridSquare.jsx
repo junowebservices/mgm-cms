@@ -1,88 +1,42 @@
 import React from "react";
-import ButtonBorder from "./ButtonBorder";
 
-const GridSquare = ({
-  firstquadrant,
-  secondquadrant,
-  thirdquadrant,
-  fourtquadrant,
-}) => {
+const GridSquare = ({}) => {
   return (
-    <div className="grid md:grid-cols-2 place-items-stretch border border-mainText">
-      <div
-        className={`${
-          firstquadrant.title.length > 1 ? "" : "hidden md:block"
-        } w-full py-12 aspect-square bg-mainYellow grid place-items-center border border-mainText`}
-      >
-        {firstquadrant && (
-          <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl font-bold">
-              {firstquadrant.title}
-            </h3>
-            <p className="mt-5">{firstquadrant.description}</p>
-            {firstquadrant.textbutton.length > 1 && (
-              <div className="mt-5">
-                <ButtonBorder text={firstquadrant.textbutton} />
-              </div>
-            )}
+    <div className="widest mt-4" id="grid-square">
+      <div className="lg:flex lg:flex-col inside lg:mt-12">
+        <h2 className="text-2xl lg:text-5xl font-semibold pb-2 lg:pb-6">
+          Latest Update
+        </h2>
+        <div className="relative grid md:grid-cols-2 text-center lg:place-items-center ">
+          <div className="hidden md:block bg-mainOrange h-full aspect-[4/3] " />
+          <div className="grid place-content-center border-2 border-mainTextColor bg-white aspect-[4/3]">
+            <div className="w-[80%] mx-auto">
+              <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainText line-clamp-1">
+                Featured
+              </h2>
+              <p className="text-secondaryTextColor line-clamp-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus laborum architecto esse facilis cupiditate ex?
+                Voluptatum et quod at, dolorum cumque inventore, perspiciatis
+                explicabo similique molestiae incidunt non placeat? Eaque.
+              </p>
+            </div>
           </div>
-        )}
-      </div>
-      <div
-        className={`${
-          secondquadrant.title.length > 1 ? "" : "hidden md:block"
-        } w-full py-12 aspect-square bg-white grid place-items-center border border-mainText`}
-      >
-        {secondquadrant && (
-          <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl font-bold">
-              {secondquadrant.title}
-            </h3>
-            <p className="mt-5">{secondquadrant.description}</p>
-            {secondquadrant.textbutton.length > 1 && (
-              <div className="mt-5">
-                <ButtonBorder text={secondquadrant.textbutton} />
-              </div>
-            )}
+          <div className="grid place-content-center border-2 border-mainTextColor bg-white aspect-[4/3]">
+            <div className="w-[80%] mx-auto">
+              <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainText line-clamp-1">
+                Featured
+              </h2>
+              <p className="text-secondaryTextColor line-clamp-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus laborum architecto esse facilis cupiditate ex?
+                Voluptatum et quod at, dolorum cumque inventore, perspiciatis
+                explicabo similique molestiae incidunt non placeat? Eaque.
+              </p>
+            </div>
           </div>
-        )}
-      </div>
-      <div
-        className={`${
-          thirdquadrant.title.length > 1 ? "" : "hidden md:block"
-        } w-full py-12 aspect-square bg-white grid place-items-center border border-mainText`}
-      >
-        {thirdquadrant && (
-          <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl font-bold">
-              {thirdquadrant.title}
-            </h3>
-            <p className="mt-5">{thirdquadrant.description}</p>
-            {thirdquadrant.textbutton.length > 1 && (
-              <div className="mt-5">
-                <ButtonBorder text={thirdquadrant.textbutton} />
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-      <div
-        className={`${fourtquadrant.title.length > 1 ? "" : "hidden md:block"}
-      w-full py-12 aspect-square bg-mainBlue grid place-items-center border border-mainText`}
-      >
-        {fourtquadrant && (
-          <div className="text-center px-4 md:mx-6">
-            <h3 className="text-3xl md:text-4xl font-bold">
-              {fourtquadrant.title}
-            </h3>
-            <p className="mt-5">{fourtquadrant.description}</p>
-            {fourtquadrant.textbutton.length > 1 && (
-              <div className="mt-5">
-                <ButtonBorder text={fourtquadrant.textbutton} />
-              </div>
-            )}
-          </div>
-        )}
+          <div className="hidden md:block bg-mainYellow h-full aspect-[4/3] " />
+        </div>
       </div>
     </div>
   );
