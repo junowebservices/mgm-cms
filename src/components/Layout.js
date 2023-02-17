@@ -5,13 +5,12 @@ import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
-import { ThemeProvider } from "@mui/material";
 import mgmTheme from "../../site/settings/theme";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <ThemeProvider theme={mgmTheme}>
+    <>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -53,7 +52,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div className="mx-auto max-w-screen-2xl">{children}</div>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 };
 

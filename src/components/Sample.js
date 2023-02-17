@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./ButtonBorder";
+import Button from "./ButtonMgm";
 
 const Sample = () => {
   return (

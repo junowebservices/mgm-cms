@@ -1,21 +1,8 @@
 import React from "react";
-import Features from "../Features";
 import BlogRoll from "../BlogRoll";
-import FullWidthImage from "../FullWidthImage";
-import LatestNews from "../LatestNews";
 import SliderCarousell from "../SliderCarousel";
-import Card from "../Card";
-import ButtonContained from "../ButtonContained";
-import EventTabs from "../EventTabs";
-import Sample from "../Sample";
-import Embracing from "../Embracing";
-import CelebrateWithUs from "../CelebrateWithUs";
-import ButtonBorder from "../ButtonBorder";
-import { getImage } from "gatsby-plugin-image";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import ButtonMgm from "../ButtonMgm";
 import GridSquare from "../GridSquare";
-import { Button } from "@mui/material";
-import MuiEventTabs from "../MuiEventTabs";
 
 const LandingPage = ({
   title,
@@ -31,14 +18,9 @@ const LandingPage = ({
   // card,
 }) => {
   // const cardImage = getImage(card.image1) || card.image1;
-  console.log(image, "image");
 
   return (
     <div>
-      {/* <SliderCarousell /> */}
-      {/* <div className="h-[600px] overflow-hidden w-full grid">
-        <PreviewCompatibleImage imageInfo={image} />
-      </div> */}
       {grid && (
         <section className="inside my-8 px-4 md:px-0">
           <GridSquare
@@ -57,7 +39,7 @@ const LandingPage = ({
                     </h3>
                     <p className="mb-6">{grid.firstquadrant.description}</p>
                     {grid.firstquadrant.button && (
-                      <ButtonBorder
+                      <ButtonMgm
                         text={grid.firstquadrant.textbutton}
                         color="mainText"
                       />
@@ -75,7 +57,7 @@ const LandingPage = ({
                   <h3 className="text-4xl mb-4">{grid.secondquadrant.title}</h3>
                   <p className="mb-6">{grid.secondquadrant.description}</p>
                   {grid.secondquadrant.button && (
-                    <ButtonBorder
+                    <ButtonMgm
                       text={grid.secondquadrant.textbutton}
                       color="mainText"
                     />
@@ -89,7 +71,7 @@ const LandingPage = ({
                   <h3 className="text-4xl mb-4">{grid.thirdquadrant.title}</h3>
                   <p className="mb-6">{grid.thirdquadrant.description}</p>
                   {grid.thirdquadrant.button && (
-                    <ButtonBorder
+                    <ButtonMgm
                       text={grid.thirdquadrant.textbutton}
                       color="mainText"
                     />
@@ -106,7 +88,7 @@ const LandingPage = ({
                     </h3>
                     <p className="mb-6">{grid.fourtquadrant.description}</p>
                     {grid.fourtquadrant.button && (
-                      <ButtonBorder
+                      <ButtonMgm
                         text={grid.fourtquadrant.textbutton}
                         color="mainText"
                       />
@@ -144,7 +126,6 @@ const LandingPage = ({
         </div>
       </section> */}
       <BlogRoll />
-      <MuiEventTabs />
       {fullrow && (
         <section className="bg-mainOrange widest text-white h-[550px] md:h-[400px] flex px-4 md:px-0">
           <div className="inside grid md:grid-cols-5 py-24">
@@ -154,7 +135,7 @@ const LandingPage = ({
 
             <div className="col-span-3">
               <p className="text-white mb-12">{fullrow.description}</p>
-              {fullrow.button && <ButtonBorder text={fullrow.textbutton} />}
+              {fullrow.button && <ButtonMgm text={fullrow.textbutton} />}
             </div>
           </div>
         </section>
@@ -177,7 +158,7 @@ const LandingPage = ({
                       {grid2.firstquadrant.description}
                     </p>
                     {grid2.firstquadrant.button && (
-                      <ButtonBorder
+                      <ButtonMgm
                         text={grid2.firstquadrant.textbutton}
                         color="mainText"
                       />
@@ -197,7 +178,7 @@ const LandingPage = ({
                   </h3>
                   <p className="mb-6">{grid2.secondquadrant.description}</p>
                   {grid2.secondquadrant.button && (
-                    <ButtonBorder
+                    <ButtonMgm
                       text={grid2.secondquadrant.textbutton}
                       color="mainText"
                     />
@@ -211,7 +192,7 @@ const LandingPage = ({
                   <h3 className="text-4xl mb-4">{grid2.thirdquadrant.title}</h3>
                   <p className="mb-6">{grid2.thirdquadrant.description}</p>
                   {grid2.thirdquadrant.button && (
-                    <ButtonBorder
+                    <ButtonMgm
                       text={grid2.thirdquadrant.textbutton}
                       color="mainText"
                     />
@@ -228,7 +209,7 @@ const LandingPage = ({
                     </h3>
                     <p className="mb-6">{grid2.fourtquadrant.description}</p>
                     {grid2.fourtquadrant.button && (
-                      <ButtonBorder
+                      <ButtonMgm
                         text={grid2.fourtquadrant.textbutton}
                         color="mainText"
                       />
@@ -249,19 +230,17 @@ const LandingPage = ({
               <h2 className="text-4xl md:w-4/5 font-bold">{fullrow2.title}</h2>
               <div className="mt-4">
                 <div>
-                  <Button>Participate as Agency</Button>
+                  <button>Participate as Agency</button>
                 </div>
                 <div>
-                  <Button>Participate as Individual</Button>
+                  <button>Participate as Individual</button>
                 </div>
               </div>
             </div>
 
             <div className="col-span-3">
               <p className="mb-12">{fullrow2.description}</p>
-              {fullrow2.textbutton && (
-                <ButtonBorder text={fullrow2.textbutton} />
-              )}
+              {fullrow2.textbutton && <ButtonMgm text={fullrow2.textbutton} />}
             </div>
           </div>
         </section>
@@ -292,7 +271,7 @@ const LandingPage = ({
                 </p>
               )}
               {fullrow2.button && (
-                <ButtonBorder
+                <ButtonMgm
                   text={fullrow2.textbutton}
                   color="mainOrange"
                   // classes="border-mainOrange text-mainOrange !bg-white border-2"

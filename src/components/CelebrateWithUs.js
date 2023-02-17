@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonBorder from "./ButtonBorder";
+import ButtonMgm from "./ButtonMgm";
 
 const CelebrateWithUs = () => {
   return (
@@ -18,7 +18,7 @@ const CelebrateWithUs = () => {
             culpa vitae eveniet, excepturi nulla eum aliquid quos suscipit
             dolores odio.
           </p>
-          <ButtonBorder
+          <ButtonMgm
             text="Join us"
             // classes="border-mainOrange text-mainOrange !bg-white border-2"
           />

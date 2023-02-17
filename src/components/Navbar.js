@@ -3,7 +3,11 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 
-import logoColored from "../img/logo-colored.svg";
+import LogoColoredIcon from "../img/logo-colored.svg";
+import FacebookIcon from "../img/facebook.svg";
+import TwitterIcon from "../img/twitter.svg";
+import InstagramIcon from "../img/instagram.svg";
+
 import Accessibility from "./Accessibility";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -18,22 +22,20 @@ import {
 } from "@heroicons/react/20/solid";
 import MobileNav from "./MobileNav";
 import contact_info from "../../site/settings/contact_info.json";
-import { Button, IconButton } from "@mui/material";
-import { Facebook, Home, Instagram, Twitter } from "@mui/icons-material";
-import ButtonBorder from "./ButtonBorder";
+import ButtonMgm from "./ButtonMgm";
 
 const Navbar = () => {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
 
   return (
     <div className="widest">
-      <div className="bg-gray-100 py-2 px-4 md:px-0">
+      <div className="bg-gray-100 py-2">
         <div className="flex justify-between items-center inside">
-          <p className="text-xs font-arial">GOVPH</p>
+          <p className="text-xs font-Arial">GOVPH</p>
           <div className="flex md:gap-8 md:mr-6 ">
             <Accessibility />
             <div className="hidden md:flex items-center ">
-              <Link className="text-xs text-mainText font-arial" to="/contact">
+              <Link className="text-xs text-mainText font-Arial" to="/contact">
                 Contact Us
               </Link>
             </div>
@@ -45,19 +47,18 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex justify-between inside py-2">
         <Link to="/">
-          <img className="h-16 md:h-24 px-4" src={logoColored} alt="Logo" />
+          <LogoColoredIcon className="w-full h-16 md:h-24" />
+          {/* <img className="h-16 md:h-24 px-4" src={logoColored} alt="Logo" /> */}
         </Link>
         <div className="flex flex-col justify-end px-4">
-          <div className="flex justify-end">
+          <div className="flex justify-end gap-4">
             {contact_info.facebook && (
               <a
                 href={`/${contact_info.facebook}`}
                 className="text-mainText"
                 target="_blank"
               >
-                <IconButton color="primary" aria-label="twitter">
-                  <Facebook />
-                </IconButton>
+                <FacebookIcon className="w-6 h-6" />
               </a>
             )}
             {contact_info.twitter && (
@@ -66,9 +67,7 @@ const Navbar = () => {
                 className="text-mainText"
                 target="_blank"
               >
-                <IconButton color="primary" aria-label="twitter">
-                  <Twitter />
-                </IconButton>
+                <TwitterIcon className="w-6 h-6" />
               </a>
             )}
             {contact_info.instagram && (
@@ -77,76 +76,16 @@ const Navbar = () => {
                 className="text-mainText"
                 target="_blank"
               >
-                <IconButton color="primary" aria-label="twitter">
-                  <Instagram />
-                </IconButton>
+                <InstagramIcon className="w-6 h-6" />
               </a>
             )}
-          </div>
-          <div className="flex mt-2 items-center">
-            <Link to="/">
-              {path === "/" ? (
-                <Button color="primary" sx={{ fontWeight: "semibold" }}>
-                  Home
-                </Button>
-              ) : (
-                <Button color="info">Home</Button>
-              )}
-            </Link>
-            <Link to="/about">
-              {path === "/about" ? (
-                <Button color="primary" sx={{ fontWeight: "semibold" }}>
-                  ABOUT
-                </Button>
-              ) : (
-                <Button color="info">ABOUT</Button>
-              )}
-            </Link>
-
-            {/* <Link
-              className={`${path === "/calendar" && "font-bold"} text-mainText`}
-              to="/calendar"
-            >
-              Calendar of Activities
-            </Link> */}
-            <DownloadLink />
-            {/* <Link
-              className={`${
-                path === "/program" && "font-bold"
-              } text-mainText`}
-              to="/program"
-            >
-              Program
-            </Link>
-            <Link
-              className={`${
-                path === "/participate" && "font-bold"
-              } text-mainText`}
-              to="/participate"
-            >
-              Participate
-            </Link>
-            <Link
-              className={`${
-                path === "/faw" && "font-bold"
-              } text-mainText`}
-              to="/faq"
-            >
-              FAQ
-            </Link> */}
-            {/* <Link
-              className={`${path === "/contact" && "font-bold"} text-mainText`}
-              to="/contact"
-            >
-              Contact
-            </Link> */}
           </div>
         </div>
       </div>
       {/* Mobile */}
       <div className="p-4 flex items-center md:hidden justify-between">
         <Link to="/">
-          <img className="h-16 md:h-28" src={logoColored} alt="Logo" />
+          <LogoColoredIcon className="w-full h-16 md:h-24" />
         </Link>
         <MobileNav path={path} />
       </div>
@@ -162,7 +101,7 @@ const DownloadLink = () => {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button>
-          <ButtonBorder text="DOWNLOAD" type="text" color="info" />
+          <ButtonMgm text="DOWNLOAD" type="text" color="info" />
         </Menu.Button>
       </div>
       <Transition

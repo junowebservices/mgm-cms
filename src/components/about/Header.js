@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonBorder from "../ButtonBorder";
+import ButtonMgm from "../ButtonMgm";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
               Embracing <br className="hidden md:block" />
               Uncertainly: <br className="hidden md:block" />
             </h2>
-            <p className="text-xl md:text-3xl font-playfair mt-4 md:mt-0">
+            <p className="text-xl md:text-3xl font-Playfair mt-4 md:mt-0">
               Showcasing <br className="hidden md:block" />
               Solidarity, Hope, <br className="hidden md:block" />
               and Recovery
@@ -65,7 +65,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi eaque
               </p>
-              <ButtonBorder text="see more" />
+              <ButtonMgm text="see more" />
             </div>
           </div>
           <div className="bg-mainOrange grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -78,7 +78,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi eaque
               </p>
-              <ButtonBorder text="join us" />
+              <ButtonMgm text="join us" />
             </div>
           </div>
           <div className="bg-mainYellow grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -90,7 +90,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis modi Modi voluptas plac
               </p>
-              <ButtonBorder text="find us" />
+              <ButtonMgm text="find us" />
             </div>
           </div>
           <div className="bg-mainBlue grid place-items-center w-full h-[380px] md:h-[550px]">
@@ -102,7 +102,7 @@ const Header = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam id
                 quaerat obcaecati sunt amet atque nobis ? Modi voluptas plac
               </p>
-              <ButtonBorder text="contact us" />
+              <ButtonMgm text="contact us" />
             </div>
           </div>
         </div>
