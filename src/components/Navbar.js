@@ -205,9 +205,9 @@ const Navbar = () => {
         </div>
       </div>  */}
       {/* Mobile */}
-      <div className="p-4 flex items-center md:hidden justify-between">
+      <div className="inside pb-2 flex items-center md:hidden justify-between">
         <Link to="/">
-          <img src="/img/logo.png" className="w-2/4" />
+          <img src="/img/logo.png" className="w-48" />
         </Link>
         <MobileNav path={path} />
       </div>
