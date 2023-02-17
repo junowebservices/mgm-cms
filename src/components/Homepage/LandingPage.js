@@ -251,7 +251,7 @@ const LandingPage = ({
           <div className="inside flex flex-col md:flex-row gap-4 py-6 md:py-24">
             {fullrow2.title && (
               <div className="md:w-4/5">
-                <h2 className="text-4xl text-mainText font-semibold">
+                <h2 className="text-4xl text-mainTextColor font-semibold">
                   {fullrow2.title}
                 </h2>
                 <div className="mt-4">
@@ -266,7 +266,7 @@ const LandingPage = ({
             )}
             <div>
               {fullrow2.description && (
-                <p className="text-mainText mb-8 mr-4 md:mr-24">
+                <p className="text-mainTextColor mb-8 mr-4 md:mr-24">
                   {fullrow2.description}
                 </p>
               )}

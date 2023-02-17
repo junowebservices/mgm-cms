@@ -10,8 +10,10 @@ class BlogRollTemplate extends React.Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
+    const path = typeof window !== "undefined" ? window.location.pathname : "";
+
     return (
-      <section className="widest my-4 ">
+      <section className="widest my-12 md:my-4">
         <div className="inside text-center md:my-12">
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 place-items-center">
             {posts &&
@@ -21,17 +23,22 @@ class BlogRollTemplate extends React.Component {
                   ({ node: post }) =>
                     post.frontmatter.featuredpost && (
                       <CardMgm
-                        key={post.id}
-                        image={post.frontmatter?.featuredimage}
-                        title={post.frontmatter.title}
                         desc={post.excerpt}
+                        id={post.id}
+                        image={post.frontmatter?.featuredimage}
+                        url={post.fields.slug}
+                        title={post.frontmatter.title}
                       />
                     )
                 )}
           </div>
-          <div className="mt-4">
-            <ButtonMgm text="View more" contained />
-          </div>
+          {path === "/" && (
+            <div className="mt-4 md:mt-6">
+              <Link to="/blog">
+                <ButtonMgm text="View more" contained />
+              </Link>
+            </div>
+          )}
         </div>
       </section>
       // <div className="columns is-multiline">

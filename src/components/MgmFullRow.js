@@ -2,8 +2,8 @@ import React from "react";
 
 const MgmFullRow = () => {
   return (
-    <section className="bg-mainOrange text-white mt-6 px-4 md:px-0 widest">
-      <div className="grid md:grid-cols-5 pt-24 pb-72 lg:w-8/12 mx-auto">
+    <section className="bg-mainOrange text-white widest">
+      <div className="grid md:grid-cols-5 pt-24 pb-56 md:pb-72 inside">
         <h2 className="text-4xl text-white col-span-2 md:w-4/5 font-bold">
           dit? Molestias, blanditiis voluptate.
         </h2>
