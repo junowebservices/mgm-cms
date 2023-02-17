@@ -4,14 +4,14 @@ const GridSquare = ({}) => {
   return (
     <div className="widest mt-4" id="grid-square">
       <div className="lg:flex lg:flex-col inside lg:mt-12">
-        <h2 className="text-2xl lg:text-5xl font-semibold pb-2 lg:pb-6">
+        <h2 className="text-2xl lg:text-5xl font-semibold mb-4">
           Latest Update
         </h2>
         <div className="relative grid md:grid-cols-2 text-center lg:place-items-center ">
           <div className="hidden md:block bg-mainOrange h-full aspect-[4/3] " />
           <div className="grid place-content-center border-2 border-mainTextColor bg-white aspect-[4/3]">
             <div className="w-[80%] mx-auto">
-              <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainText line-clamp-1">
+              <h2 className="text-2xl lg:text-5xl font-medium my-3 text-mainTextColor line-clamp-1">
                 Featured
               </h2>
               <p className="text-secondaryTextColor line-clamp-4">
@@ -24,7 +24,7 @@ const GridSquare = ({}) => {
           </div>
           <div className="grid place-content-center border-2 border-mainTextColor bg-white aspect-[4/3]">
             <div className="w-[80%] mx-auto">
-              <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainText line-clamp-1">
+              <h2 className="text-2xl lg:text-5xl font-medium my-3 text-mainTextColor line-clamp-1">
                 Featured
               </h2>
               <p className="text-secondaryTextColor line-clamp-4">

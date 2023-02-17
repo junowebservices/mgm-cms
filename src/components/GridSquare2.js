@@ -10,7 +10,7 @@ const GridSquare2 = () => {
           <div className="grid place-content-center text-center border-2 border-mainTextColor aspect-[4/3] bg-white">
             <div className="w-[90%] mx-auto space-y-4">
               <div>
-                <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainTextColor line-clamp-1">
+                <h2 className="text-2xl lg:text-5xl font-medium my-3 text-mainTextColor line-clamp-1">
                   Embracing Uncertainty
                 </h2>
                 <p className="text-secondaryTextColor line-clamp-4">
@@ -28,7 +28,7 @@ const GridSquare2 = () => {
           <div className="grid place-content-center border-2 border-mainTextColor bg-white aspect-[4/3]">
             <div className="w-[90%] mx-auto space-y-4">
               <div>
-                <h2 className="text-2xl lg:text-4xl font-medium my-3 text-mainTextColor line-clamp-1">
+                <h2 className="text-2xl lg:text-5xl font-medium my-3 text-mainTextColor line-clamp-1">
                   Events & Activies
                 </h2>
                 <p className="text-secondaryTextColor line-clamp-4">

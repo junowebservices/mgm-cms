@@ -2,11 +2,9 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 import contact from "../../site/settings/contact_info.json";
+import { FbIcon, IGIcon, TwitterIcon } from "./Icons";
 
-import LogoColoredIcon from "../img/logo-colored.svg";
-import FacebookIcon from "../img/facebook.svg";
-import TwitterIcon from "../img/twitter.svg";
-import InstagramIcon from "../img/instagram.svg";
+// import LogoColoredIcon from "../img/logo-colored.svg";
 
 const Footer = () => {
   var currentTime = new Date();
@@ -15,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="widest border-t-2 border-mainText">
       <div className="grid md:grid-cols-3 inside py-6 md:py-12 gap-4 md:gap-y-4">
-        <LogoColoredIcon className="w-full h-16 md:h-24" />
+        {/* <LogoColoredIcon className="w-full h-16 md:h-24" /> */}
         <div className="flex flex-col gap-4 md:gap-0 justify-between h-full">
           <div>
             <h3 className="font-semibold text-lg font-Roboto">Telephone</h3>
@@ -47,7 +45,7 @@ const Footer = () => {
                 className="text-mainText"
                 target="_blank"
               >
-                <FacebookIcon className="w-6 h-6" />
+                <FbIcon />
               </a>
             )}
             {contact.twitter && (
@@ -56,7 +54,7 @@ const Footer = () => {
                 className="text-mainText"
                 target="_blank"
               >
-                <TwitterIcon className="w-6 h-6" />
+                <TwitterIcon />{" "}
               </a>
             )}
             {contact.instagram && (
@@ -65,7 +63,7 @@ const Footer = () => {
                 className="text-mainText"
                 target="_blank"
               >
-                <InstagramIcon className="w-6 h-6" />
+                <IGIcon />{" "}
               </a>
             )}
           </div>

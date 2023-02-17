@@ -2,10 +2,10 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import PropTypes from "prop-types";
-
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -42,7 +42,7 @@ const settings = {
   infinite: true,
   pauseOnFocus: true,
   pauseOnHover: true,
-  speed: 1000,
+  speed: 200,
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -56,7 +56,7 @@ const SliderTemplate = ({ data }) => {
   return (
     <Slider
       {...settings}
-      className="overflow-hidden min-h-[230px] h-[230px] sm:h-[450px] md:h-[580px]"
+      className="overflow-hidden min-h-[230px] h-[230px] sm:h-[450px] md:h-[580px] widest"
     >
       {imageData.image1 && (
         <Img fluid={imageData.image1.image.childrenImageSharp[0].fluid} />

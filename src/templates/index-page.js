@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import HomePage from "../components/Homepage/LandingPage";
-import SliderCarousell from "../components/SliderCarousel";
+import EventsTab from "../components/EventsTab";
+import SliderCarousel from "../components/SliderCarousel";
 import GridSquare from "../components/GridSquare";
 import GridSquare2 from "../components/GridSquare2";
 import MgmFullRow from "../components/MgmFullRow";
 import BlogRoll from "../components/BlogRoll";
+import ButtonMgm from "../components/ButtonMgm";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -23,11 +24,31 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
   return (
     <>
-      <SliderCarousell />
+      <SliderCarousel />
       <GridSquare />
       <BlogRoll />
+      <EventsTab />
       <MgmFullRow />
       <GridSquare2 />
+      <section className="bg-white py-6 widest">
+        <div className="grid md:grid-cols-5 inside">
+          <h2 className="text-4xl col-span-2 md:w-4/5 font-bold">
+            Celebrate with us
+          </h2>
+
+          <div className="col-span-3">
+            <p className="mb-6 mt-2 lg:mb-12 lg:mt-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              nesciunt eius cum dolorum fugit vel harum reiciendis unde. Amet,
+              quaerat et. Beatae quam, saepe consequuntur facilis exercitationem
+              nihil molestias earum!
+            </p>
+            <div>
+              <ButtonMgm text="Know more" />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

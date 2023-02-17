@@ -4,7 +4,7 @@ import ButtonMgm from "../ButtonMgm";
 const Header = () => {
   return (
     <>
-      <section className="bg-mainBlue px-4 md:px-0 widest text-mainText">
+      <section className="bg-mainBlue widest text-mainText">
         <div className="inside grid md:grid-cols-5 gap-4 py-24">
           <div className="col-span-2">
             <h2 className="text-4xl md:text-5xl font-medium">
@@ -27,7 +27,7 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className="px-4 md:px-0 widest text-mainText flex">
+      <section className="widest text-mainTextColor flex">
         <div className="inside grid md:grid-cols-5 gap-4 py-16 md:py-24">
           <div className="col-span-2">
             <h2 className="text-4xl md:text-5xl font-medium">Our goals</h2>
@@ -107,7 +107,7 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className="px-4 md:px-0 widest text-mainText flex">
+      <section className="widest text-mainTextColor flex">
         <div className="inside grid md:grid-cols-5 gap-4 py-24">
           <div className="col-span-2">
             <h2 className="text-4xl md:text-5xl">
