@@ -9,8 +9,8 @@ module.exports = {
     extend: {
       colors: {
         transparent: "transparent",
-        mainBg: "#f7f8f2",
-        secondaryBg: "#eeeeee",
+        mainBg: "#f7f7f7",
+        secondaryBg: "#F0F0F0",
         mainOrange: {
           DEFAULT: "#e0630e",
           dark: "#b04e0b",
@@ -26,8 +26,8 @@ module.exports = {
           dark: "#0e587d",
           light: "#3ab0ea",
         },
-        mainTextColor: "#202020",
-        secondaryTextColor: "#464646",
+        mainTextColor: "#000000",
+        secondaryTextColor: "#858585",
         DarkTextColor: "#e5e5e5",
         DarksecondaryTextColor: "#6B6675",
         shadowColor: "#E6E9F1",

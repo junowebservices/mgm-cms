@@ -16,7 +16,7 @@ import {
 import MobileNav from "./MobileNav";
 import contact_info from "../../site/settings/contact_info.json";
 import ButtonMgm from "./ButtonMgm";
-import { FbIcon, IGIcon, TwitterIcon } from "./Icons";
+import { EmailIcon, FbIcon, IGIcon, TwitterIcon, WebIcon } from "./Icons";
 
 const Navbar = () => {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
@@ -78,6 +78,24 @@ const Navbar = () => {
                   <IGIcon />
                 </a>
               )}
+              {contact_info.email && (
+                <a
+                  href={contact_info.email}
+                  className="text-mainText"
+                  target="_blank"
+                >
+                  <EmailIcon />
+                </a>
+              )}
+              {contact_info.tiktok && (
+                <a
+                  href={contact_info.tiktok}
+                  className="text-mainText"
+                  target="_blank"
+                >
+                  <WebIcon />
+                </a>
+              )}
             </div>
           </div>
           <div class="col-span-2 flex justify-end mb-2">
@@ -85,7 +103,7 @@ const Navbar = () => {
               <button
                 className={`${
                   path === "/" && "font-bold !text-mainOrange "
-                }  h-6 w-[80px] text-sm text-center text-mainTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
+                }  h-6 w-[80px] text-base text-center text-secondaryTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
               >
                 Home
               </button>
@@ -94,7 +112,7 @@ const Navbar = () => {
               <button
                 className={`${
                   path === "/about" && "font-bold !text-mainOrange "
-                }  h-6 w-[80px] text-sm text-center text-mainTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
+                }  h-6 w-[80px] text-base text-center text-secondaryTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
               >
                 About
               </button>
@@ -103,7 +121,7 @@ const Navbar = () => {
               <button
                 className={`${
                   path === "/calendar" && "font-bold !text-mainOrange "
-                }  h-6 w-[100px] text-sm text-center text-mainTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
+                }  h-6 w-[100px] text-base text-center text-secondaryTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
               >
                 Calendar
               </button>
@@ -112,7 +130,7 @@ const Navbar = () => {
               <button
                 className={`${
                   path === "/download" && "font-bold !text-mainOrange "
-                }  h-6 w-[100px] text-sm text-center text-mainTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
+                }  h-6 w-[100px] text-base text-center text-secondaryTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
               >
                 Download+
               </button>
@@ -121,7 +139,7 @@ const Navbar = () => {
               <button
                 className={`${
                   path === "/contact" && "font-bold !text-mainOrange "
-                }  h-6 w-[80px] text-sm text-center text-mainTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
+                }  h-6 w-[80px] text-base text-center text-secondaryTextColor transition-all ease-in-out duration-300 underline-offset-4 hover:underline hover:text-mainOrange-dark`}
               >
                 Contact
               </button>

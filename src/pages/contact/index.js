@@ -38,8 +38,10 @@ export default class Index extends React.Component {
       <Layout>
         <section className="widest mt-12">
           <div className="inside">
-            <div className="content">
-              <h1>Contact</h1>
+            <div className="">
+              <h2 className="text-2xl lg:text-5xl font-bold my-6 text-mainTextColor ">
+                Contact Us
+              </h2>
               <form
                 name="contact"
                 method="post"
@@ -56,43 +58,45 @@ export default class Index extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={"name"}>
-                    Your name
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={"text"}
-                      name={"name"}
-                      onChange={this.handleChange}
-                      id={"name"}
-                      required={true}
-                    />
+                <div className="grid lg:grid-cols-2 gap-4 w-full">
+                  <div className="flex gap-4 flex-col">
+                    <div>
+                      <input
+                        className="w-full bg-mainBg text-base py-3 px-6 "
+                        type={"text"}
+                        name={"name"}
+                        onChange={this.handleChange}
+                        id={"name"}
+                        required={true}
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        placeholder="Department/Agency"
+                        className="w-full bg-mainBg text-base py-3 px-6"
+                        type={"text"}
+                        name={"agency"}
+                        onChange={this.handleChange}
+                        id={"agency"}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        placeholder="Email Address"
+                        className="w-full bg-mainBg text-base py-3 px-6"
+                        type={"email"}
+                        name={"email"}
+                        onChange={this.handleChange}
+                        id={"email"}
+                        required={true}
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={"email"}>
-                    Email
-                  </label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type={"email"}
-                      name={"email"}
-                      onChange={this.handleChange}
-                      id={"email"}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={"message"}>
-                    Message
-                  </label>
-                  <div className="control">
+                  <div>
                     <textarea
-                      className="textarea"
+                      placeholder="Message"
+                      className="w-full h-full bg-mainBg text-base py-3 px-6"
                       name={"message"}
                       onChange={this.handleChange}
                       id={"message"}
@@ -100,8 +104,11 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div className="text-right">
+                  <button
+                    className="bg-mainOrange hover:text-mainOrange border-mainOrange text-white mt-3 mb-5 border-2  hover:bg-white focus:ring-4 focus:outline-none focus:ring-mainOrange-dark font-medium text-sm px-5 py-1.5 text-center uppercase transition-all ease-in-out duration-300"
+                    type="submit"
+                  >
                     Send
                   </button>
                 </div>

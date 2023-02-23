@@ -17,7 +17,7 @@
     @apply mx-auto lg:w-10/12 px-4 md:px-6 lg:px-0;
   }
   .buttonIcon {
-    @apply w-5 h-5 text-mainOrange hover:text-mainOrange-dark fill-current;
+    @apply w-6 h-6 text-mainOrange hover:text-mainOrange-dark fill-current;
   }
 }
 
