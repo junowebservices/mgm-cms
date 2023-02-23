@@ -62,7 +62,7 @@ export default class Index extends React.Component {
                   <div className="flex gap-4 flex-col">
                     <div>
                       <input
-                        className="w-full bg-mainBg text-base py-3 px-6 "
+                        className="w-full bg-mainBg text-sm lg:text-base p-3 "
                         type={"text"}
                         name={"name"}
                         onChange={this.handleChange}
@@ -74,7 +74,7 @@ export default class Index extends React.Component {
                     <div>
                       <input
                         placeholder="Department/Agency"
-                        className="w-full bg-mainBg text-base py-3 px-6"
+                        className="w-full bg-mainBg text-sm lg:text-base p-3"
                         type={"text"}
                         name={"agency"}
                         onChange={this.handleChange}
@@ -84,7 +84,7 @@ export default class Index extends React.Component {
                     <div>
                       <input
                         placeholder="Email Address"
-                        className="w-full bg-mainBg text-base py-3 px-6"
+                        className="w-full bg-mainBg text-sm lg:text-base p-3"
                         type={"email"}
                         name={"email"}
                         onChange={this.handleChange}
@@ -96,7 +96,7 @@ export default class Index extends React.Component {
                   <div>
                     <textarea
                       placeholder="Message"
-                      className="w-full h-full bg-mainBg text-base py-3 px-6"
+                      className="w-full h-full bg-mainBg text-sm lg:text-base p-3 min-h-[150px]"
                       name={"message"}
                       onChange={this.handleChange}
                       id={"message"}
