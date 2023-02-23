@@ -2,8 +2,10 @@ import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
 import {
+  ArrowDownTrayIcon,
   Bars3BottomRightIcon,
   CalendarDaysIcon,
+  CalendarIcon,
   HomeIcon,
   PhoneIcon,
   QuestionMarkCircleIcon,
@@ -31,7 +33,7 @@ const MobileNav = ({ path }) => {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute right-0 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-            <div className="px-1 py-1 ">
+            <div className="px-1 py-1 space-y-1">
               <Link to="/">
                 <Menu.Item>
                   {({ active }) => (
@@ -40,7 +42,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <HomeIcon
                         className={`${
@@ -50,17 +52,6 @@ const MobileNav = ({ path }) => {
                         } mr-2 h-5 w-5 `}
                         aria-hidden="true"
                       />
-                      {/* {active ? (
-                      <EditActiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <EditInactiveIcon
-                        className="mr-2 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    )} */}
                       Home
                     </button>
                   )}
@@ -74,7 +65,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/about"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <UserGroupIcon
                         className={`${
@@ -89,6 +80,75 @@ const MobileNav = ({ path }) => {
                   )}
                 </Menu.Item>
               </Link>
+              <Link to="/calendar">
+                <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      className={`${
+                        active || path === "/calendar"
+                          ? "bg-mainOrange text-white"
+                          : "text-gray-900"
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
+                    >
+                      <CalendarIcon
+                        className={`${
+                          active || path === "/calendar"
+                            ? "text-white"
+                            : "text-mainOrange"
+                        } mr-2 h-5 w-5 `}
+                        aria-hidden="true"
+                      />
+                      Calendar
+                    </button>
+                  )}
+                </Menu.Item>
+              </Link>
+              <Link to="/download">
+                <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      className={`${
+                        active || path === "/download"
+                          ? "bg-mainOrange text-white"
+                          : "text-gray-900"
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
+                    >
+                      <ArrowDownTrayIcon
+                        className={`${
+                          active || path === "/download"
+                            ? "text-white"
+                            : "text-mainOrange"
+                        } mr-2 h-5 w-5 `}
+                        aria-hidden="true"
+                      />
+                      Download+
+                    </button>
+                  )}
+                </Menu.Item>
+              </Link>
+              <Link to="/contact">
+                <Menu.Item>
+                  {({ active }) => (
+                    <button
+                      className={`${
+                        active || path === "/contact"
+                          ? "bg-mainOrange text-white"
+                          : "text-gray-900"
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
+                    >
+                      <PhoneIcon
+                        className={`${
+                          active || path === "/contact"
+                            ? "text-white"
+                            : "text-mainOrange"
+                        } mr-2 h-5 w-5 `}
+                        aria-hidden="true"
+                      />
+                      Contact
+                    </button>
+                  )}
+                </Menu.Item>
+              </Link>
               {/* <Link to="/program">
                 <Menu.Item>
                   {({ active }) => (
@@ -97,7 +157,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/program"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <Squares2X2Icon
                         className={`${
@@ -120,7 +180,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/participate"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <CalendarDaysIcon
                         className={`${
@@ -143,7 +203,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/faq"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <QuestionMarkCircleIcon
                         className={`${
@@ -166,7 +226,7 @@ const MobileNav = ({ path }) => {
                         active || path === "/contact"
                           ? "bg-mainOrange text-white"
                           : "text-gray-900"
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm my-1`}
                     >
                       <PhoneIcon
                         className={`${

@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="col-span-2 order-first md:order-last">
           <h3 className="ext-base font-bold">Search MGM</h3>
           <div className="relative">
-            <input className="w-full bg-mainBg text-sm lg:text-base py-1 !pr-6 px-3 " />
+            <input className="w-full bg-mainBg text-sm lg:text-base py-1 !pr-8 pl-3 " />
             <div className="absolute top-2 right-2 cursor-pointer">
               <SearchIcon />
             </div>
