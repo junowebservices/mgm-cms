@@ -32,6 +32,17 @@ body {
   box-sizing: border-box;
 }
 
+@media only screen and (min-width: 768px) {
+  .blog-banner {
+    height: 350px !important;
+    object-fit: cover;
+  }
+  .blog-title {
+    font-size: 75px !important;
+    line-height: 78px !important;
+  }
+}
+
 .slick-arrow {
   z-index: 1;
 }

@@ -27,19 +27,19 @@ export const BlogPostTemplate = ({
   return (
     <section className="widest">
       {helmet || ""}
-      <div className="w-full h-[200px] lg:h-[300px] overflow-hidden grid content-center">
-        <img
-          className="w-full"
-          src={featuredimage.childrenImageSharp[0].fluid.src}
-          alt={title}
-        />
-      </div>
+      {/* <div className="w-full h-[200px] overflow-hidden grid content-center blog-banner"> */}
+      <img
+        className="flex w-full blog-banner h-[200px]"
+        src={featuredimage.childrenImageSharp[0].fluid.src}
+        alt={title}
+      />
+      {/* </div> */}
       <div className="inside my-6">
         <div>
           {/* <PreviewCompatibleImage
               imageInfo={featuredimage.childrenImageSharp[0].fluid.src}
             /> */}
-          <h2 className="text-4xl lg:text-7xl font-Playfair font-bold ">
+          <h2 className="text-4xl blog-title font-Playfair font-bold ">
             {title}
           </h2>
           <div className="my-4">
@@ -54,9 +54,11 @@ export const BlogPostTemplate = ({
             <div className="flex gap-2">
               <p className="text-secondaryTextColor text-base">Tags:</p>
               {tags.map((tag) => (
-                <div key={tag + `tag`} className="self-center">
+                <div key={tag + `tag`} className="grid place-content-center">
                   <Link to={`/tags/${kebabCase(tag)}/`}>
-                    <p className="text-xs text-secondaryTextColor">{tag}</p>
+                    <p className="underline text-xs text-secondaryTextColor">
+                      {tag}
+                    </p>
                   </Link>
                 </div>
               ))}

@@ -25,12 +25,8 @@ export default class BlogIndexPage extends React.Component {
             Latest Stories
           </h1>
         </div> */}
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
-            </div>
-          </div>
+        <section>
+          <BlogRoll />
         </section>
       </Layout>
     );

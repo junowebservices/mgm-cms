@@ -117,7 +117,7 @@ const Navbar = () => {
                 About
               </button>
             </Link>
-            <Link to="/">
+            <Link to="/calendar">
               <button
                 className={`${
                   path === "/calendar" && "font-bold !text-mainOrange "
