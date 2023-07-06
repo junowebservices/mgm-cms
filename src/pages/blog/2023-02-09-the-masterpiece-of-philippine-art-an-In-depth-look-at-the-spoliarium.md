@@ -13,6 +13,7 @@ tags:
   - painting
   - Spoliarium
 ---
+
 ![spolarium](https://upload.wikimedia.org/wikipedia/commons/c/ce/Spoliarium.jpg)
 
 The Spoliarium is a painting by Filipino artist Juan Luna, and it is considered one of the greatest masterpieces of Philippine art. Created in 1884, it was a critical success and helped establish Luna as one of the leading artists of his time. Today, it remains one of the most iconic works of Philippine art and is an important symbol of Philippine culture and history.

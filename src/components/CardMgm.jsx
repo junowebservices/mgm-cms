@@ -22,11 +22,7 @@ export default function CardMgm({ desc, id, image, url, title }) {
         }}
       /> */}
         {image && (
-          <img
-            src={image.childrenImageSharp[0].fluid.src}
-            alt={title}
-            className="h-[240px]"
-          />
+          <img src={image.childrenImageSharp[0].fluid.src} alt={title} />
         )}
         {/* <div className="bg-mainBlue h-[200px] w-full" /> */}
         <div className="px-2 pt-4 pb-6 text-center bg-white">

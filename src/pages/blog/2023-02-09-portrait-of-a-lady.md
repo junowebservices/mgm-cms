@@ -8,8 +8,9 @@ description: John Singer Sargent was one of the leading portrait artists of the
   an elegantly dressed woman seated in a plush armchair, with a serene
   expression on her face.
 featuredpost: true
-featuredimage: /img/13-portrait-of-paz-pardo-de-tavera.jpg
+featuredimage: /img/sample-2.jpg
 ---
+
 John Singer Sargent was one of the leading portrait artists of the late 19th and early 20th centuries, and "Portrait of a Lady" is considered one of his greatest works. The painting, which was created around 1888, features an elegantly dressed woman seated in a plush armchair, with a serene expression on her face.
 
 John Singer Sargent was one of the leading portrait artists of the late 19th and early 20th centuries, and "Portrait of a Lady" is considered one of his greatest works. The painting, which was created around 1888, features an elegantly dressed woman seated in a plush armchair, with a serene expression on her face.

@@ -10,14 +10,14 @@ const EventsTab = () => {
     Recent: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
+        title: "Historical Walking Tour: Unveiling the Secrets of our City",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
+        title: "Interactive Art Workshop: Exploring Colors and Emotions",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -26,14 +26,14 @@ const EventsTab = () => {
     Popular: [
       {
         id: 1,
-        title: "Is tech making coffee better or worse?",
+        title: "Hands-On Archaeology Workshop: Unearthing Ancient Artifacts?",
         date: "Jan 7",
         commentCount: 29,
         shareCount: 16,
       },
       {
         id: 2,
-        title: "The most innovative things happening in coffee",
+        title: "Lecture Series: Exploring the Evolution of Modern Art",
         date: "Mar 19",
         commentCount: 24,
         shareCount: 12,
@@ -42,14 +42,14 @@ const EventsTab = () => {
     Trending: [
       {
         id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
+        title: "Photography Exhibition: Capturing the Essence of our Heritage",
         date: "2d ago",
         commentCount: 9,
         shareCount: 5,
       },
       {
         id: 2,
-        title: "The worst advice we've ever heard about coffee",
+        title: "Music Performance: Harmonies of the Past and Present",
         date: "4d ago",
         commentCount: 1,
         shareCount: 2,
@@ -87,7 +87,7 @@ const EventsTab = () => {
 
                   <ul className="block">
                     {posts.map((post) => (
-                      <li key={post.id} className=" py-2 px-3 bg-gray-200">
+                      <li key={post.id} className=" py-2 px-3">
                         <h3 className="text-sm font-medium leading-5">
                           {post.title}
                         </h3>
