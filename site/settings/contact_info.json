@@ -1,11 +1,11 @@
 {
-  "youtube": "youtube.com",
-  "facebook": "facebook.com",
-  "instagram": "instagram.com",
-  "twitter": "twitter.com",
+  "youtube": "https://www.youtube.com",
+  "facebook": "https://www.facebook.com",
+  "instagram": "https://www.instagram.com",
+  "twitter": "https://www.twitter.com",
   "address": "National Commission for Culture and the Arts Building 633 Gen. Luna St., Intramuros, Manila",
   "telephone_1": "8527-2192 loc. 309",
   "telephone_2": "+63 943 505 4939",
-  "tiktok": "tiktok.com",
+  "tiktok": "https://www.tiktok.com",
   "email": "mgmsecretariat@gmail.com"
 }

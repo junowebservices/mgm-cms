@@ -16,7 +16,12 @@ import {
 import MobileNav from "./MobileNav";
 import contact_info from "../../site/settings/contact_info.json";
 import ButtonMgm from "./ButtonMgm";
-import { EmailIcon, FbIcon, IGIcon, TwitterIcon, WebIcon } from "./Icons";
+
+import { BiGlobe } from "react-icons/bi";
+import { MdAlternateEmail } from "react-icons/md";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 
 const Navbar = () => {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
@@ -25,7 +30,13 @@ const Navbar = () => {
     <section className="widest">
       <div className="bg-gray-100 py-1">
         <div className="flex justify-between items-center inside">
-          <p className="text-xs font-Arial">GOVPH</p>
+          <Link
+            href="https://www.gov.ph/"
+            target="_blank"
+            className="text-xs font-Arial text-mainTextColor"
+          >
+            GOVPH
+          </Link>
           <div className="flex md:gap-8 md:mr-6 ">
             <Accessibility />
             <div className="hidden md:flex items-center ">
@@ -52,13 +63,13 @@ const Navbar = () => {
           <div class="col-span-2 mr-3">
             <div className="flex justify-end gap-4">
               {contact_info.facebook && (
-                <a
-                  href={`/${contact_info.facebook}`}
+                <Link
+                  href={contact_info.facebook}
                   className="text-mainText"
                   target="_blank"
                 >
-                  <FbIcon />
-                </a>
+                  <BsFacebook className="w-5 h-5 text-mainOrange" />
+                </Link>
               )}
               {contact_info.twitter && (
                 <a
@@ -66,7 +77,7 @@ const Navbar = () => {
                   className="text-mainText"
                   target="_blank"
                 >
-                  <TwitterIcon />
+                  <AiFillTwitterCircle className="w-5 h-5 text-mainOrange" />
                 </a>
               )}
               {contact_info.instagram && (
@@ -75,25 +86,16 @@ const Navbar = () => {
                   className="text-mainText"
                   target="_blank"
                 >
-                  <IGIcon />
+                  <AiFillInstagram className="w-5 h-5 text-mainOrange" />
                 </a>
               )}
               {contact_info.email && (
                 <a
-                  href={contact_info.email}
+                  href={`mailto:${contact_info.email}`}
                   className="text-mainText"
                   target="_blank"
                 >
-                  <EmailIcon />
-                </a>
-              )}
-              {contact_info.tiktok && (
-                <a
-                  href={contact_info.tiktok}
-                  className="text-mainText"
-                  target="_blank"
-                >
-                  <WebIcon />
+                  <MdAlternateEmail className="w-5 h-5 text-mainOrange" />
                 </a>
               )}
             </div>
