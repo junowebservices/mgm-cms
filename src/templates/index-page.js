@@ -69,9 +69,7 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  console.log(data, "wwwdata");
   const { frontmatter } = data.markdownRemark;
-  // console.log(frontmatter.imageslider, "wwwfrontmatter");
   return (
     <Layout>
       <IndexPageTemplate

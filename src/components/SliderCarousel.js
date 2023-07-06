@@ -52,7 +52,6 @@ const settings = {
 
 const SliderTemplate = ({ data }) => {
   const imageData = data.markdownRemark.frontmatter.imageslider;
-
   return (
     <Slider
       {...settings}

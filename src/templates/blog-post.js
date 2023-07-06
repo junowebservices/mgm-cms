@@ -22,24 +22,23 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(featuredimage.childrenImageSharp[0], "wwwfeaturedimage");
 
   return (
     <section className="widest">
       {helmet || ""}
-      {/* <div className="w-full h-[200px] overflow-hidden grid content-center blog-banner"> */}
       <img
-        className="flex w-full blog-banner h-[200px]"
+        className="object-fill w-full"
         src={featuredimage.childrenImageSharp[0].fluid.src}
         alt={title}
       />
-      {/* </div> */}
+      {/* <div className="w-full object-fill border-2 ">
+        <PreviewCompatibleImage
+          imageInfo={featuredimage.childrenImageSharp[0].fluid.src}
+        />
+      </div> */}
       <div className="inside my-6">
         <div>
-          {/* <PreviewCompatibleImage
-              imageInfo={featuredimage.childrenImageSharp[0].fluid.src}
-            /> */}
-          <h2 className="text-4xl blog-title font-Playfair font-bold ">
+          <h2 className="text-3xl blog-title font-Playfair font-bold ">
             {title}
           </h2>
           <div className="my-4">
@@ -65,8 +64,8 @@ export const BlogPostTemplate = ({
             </div>
           ) : null}
           <div className="space-y-4 mt-4">
-            <p className="text-mainTextColor text-sm">{description}</p>
-            <PostContent content={content} className="text-sm space-y-4" />
+            <p className="text-mainTextColor ">{description}</p>
+            <PostContent content={content} className="space-y-4" />
           </div>
         </div>
       </div>
